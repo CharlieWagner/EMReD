@@ -8701,7 +8701,7 @@ GameObject:
   - component: {fileID: 869069644}
   - component: {fileID: 869069645}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Color
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8729,11 +8729,11 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 869069643}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 64d5341460e40984f8708267ad42ae6a, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: f494e174ca450ff49b7a4612a5ba4fa8, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
-  m_TargetTexture: {fileID: 8400000, guid: 5cd2d512e11d1bd4a9f6676199f96304, type: 2}
+  m_TargetTexture: {fileID: 8400000, guid: 80479bfb1032b52418fe18c4447bd664, type: 2}
   m_TimeReference: 0
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: _MainTex
@@ -12225,7 +12225,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17326
+  m_Name: pb_Mesh17332
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
