@@ -54,8 +54,7 @@ public class RoverController : MonoBehaviour
     {
 
     }
-
-    void Update()
+    private void Update()
     {
 
         if (ControlMode == 1)
@@ -94,13 +93,18 @@ public class RoverController : MonoBehaviour
         Camera.transform.rotation = CameraPos[SelectedCam].transform.rotation;
         CameraCamera.fieldOfView = CameraPosScript[SelectedCam].fov;
 
-        
+
 
         HudText.text = ControlModeText[ControlMode] +
                 "\n" + "Camera " + (SelectedCam + 1) +
                 "\n" +
                 "\n" + "Slot 01 : " + ToolText[Slot01] +
                 "\n" + "Slot 02 : " + ToolText[Slot02];
+
+    }
+
+    void FixedUpdate()
+    {
 
         if (isGrounded())
         {
