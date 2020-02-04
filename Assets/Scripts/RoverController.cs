@@ -6,49 +6,44 @@ using UnityEngine.UI;
 public class RoverController : MonoBehaviour
 {
     [Header("Contrôles caméra")]
-    public float xsens = 2f;//sensi' horizontale
-    public float ysens = 2f;//sensi' verticale
+    public float _xsens = 2f;//sensi' horizontale
+    public float _ysens = 2f;//sensi' verticale
 
-    public GameObject Camera;//Geez I wonder what that is
-    public Camera CameraCamera;
-
-    public GameObject[] CameraPos;
-    public CameraScript[] CameraPosScript;
-    //private float[] HorizontalRot;
-    //private float[] VerticalRot;//rotation verticale de la caméra
-    public int SelectedCam;
-    public float Vrange = 90.0f;//LIMITE vericale de la caméra
-    public float Hrange = 90.0f;
+    public GameObject _Camera;//Geez I wonder what that is
+    public Camera _CameraCamera;
+    public CameraScript[] _CameraPosScript;
+    
+    /*public float _Vrange = 90.0f;//LIMITE vericale de la caméra
+    public float _Hrange = 90.0f;*/
     [Header("Contrôles déplacement")]
-    public float GroundSpeed;
-    public float RotSpeed;
-    public float MaxAcceleration;
-    public float AirControl;
-    public float JetpackSpeed;
-    private Vector3 GroundedForwards;
-    public float maxFloorAngle;
+    public float _GroundSpeed;
+    public float _RotSpeed;
+    public float _MaxAcceleration;
+    public float _AirControl;
+    public float _JetpackSpeed;
+    private Vector3 _GroundedForwards;
+    public float _maxFloorAngle;
 
-    public float WheelRotateSpeed;
-    public Transform[] Wheels;
+    public float _WheelRotateSpeed;
+    public Transform[] _Wheels;
     [Header("Rover Stuff")]
-    public GameObject MinimapCamera;
 
-    public Text HudText;
-    public string[] ControlModeText;
-    public string[] ToolText;
-    public int Slot01;
-    public int Slot02;
+    public GameObject _MinimapCamera;
+
+    public Text _HudText;
+    [Range(0, 4)]
+    public int _CurrentTool; // 0 Nothing // 1 Thruster // 2 Laser // 3 Scanner // 4 Menu
+    public string[] _ToolText;
+    public string[] _ToolTip;
 
 
     [Header("Sound")]
-    public AudioClip[] Sound; // 0 Cam Switch, 1 Cam Motor, 2 Rover Motor, 3 Control Mode Switch
-    public AudioSource Source;
+    public AudioClip[] _Sound; // 0 Cam Switch, 1 Cam Motor, 2 Rover Motor, 3 Control Mode Switch
+    public AudioSource _Source;
 
-    public int ControlMode; // 0 rover 1 camera 2 ???
+    public Rigidbody _PlayerRB;
 
-    public Rigidbody PlayerRB;
-
-    public Animator CanvasAnim;
+    public Animator _CanvasAnim;
 
     void Start()
     {
@@ -56,10 +51,11 @@ public class RoverController : MonoBehaviour
     }
     private void Update()
     {
-
+        /*
         if (ControlMode == 1)
         {
-            CameraPosScript[SelectedCam].RotateCam(Input.GetAxis("Horizontal") * Time.deltaTime * RotSpeed, Input.GetAxis("Vertical") * Time.deltaTime * RotSpeed);
+            
+            CameraPosScript[Current].RotateCam(Input.GetAxis("Horizontal") * Time.deltaTime * RotSpeed, Input.GetAxis("Vertical") * Time.deltaTime * RotSpeed);
 
             if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
             {
@@ -88,18 +84,31 @@ public class RoverController : MonoBehaviour
             Source.Play();
             CanvasAnim.SetTrigger("CamSwitch");
         }
+        */
 
-        Camera.transform.position = CameraPos[SelectedCam].transform.position;
-        Camera.transform.rotation = CameraPos[SelectedCam].transform.rotation;
-        CameraCamera.fieldOfView = CameraPosScript[SelectedCam].fov;
+        if (Input.GetKey(KeyCode.Alpha1))
+            _CurrentTool = 0;
+
+        if (Input.GetKey(KeyCode.Alpha2))
+            _CurrentTool = 1;
+
+        if (Input.GetKey(KeyCode.Alpha3))
+            _CurrentTool = 2;
+
+        if (Input.GetKey(KeyCode.Alpha4))
+            _CurrentTool = 3;
+
+        if (Input.GetKey(KeyCode.Alpha5))
+            _CurrentTool = 4;
+
+        _Camera.transform.position = _CameraPosScript[_CurrentTool]._FinalTransform.position;
+        _Camera.transform.rotation = _CameraPosScript[_CurrentTool]._FinalTransform.transform.rotation;
+        _CameraCamera.fieldOfView  = _CameraPosScript[_CurrentTool].fov;
 
 
 
-        HudText.text = ControlModeText[ControlMode] +
-                "\n" + "Camera " + (SelectedCam + 1) +
-                "\n" +
-                "\n" + "Slot 01 : " + ToolText[Slot01] +
-                "\n" + "Slot 02 : " + ToolText[Slot02];
+        _HudText.text = "CURRENT TOOL : " + _ToolText[_CurrentTool] +
+                "\n" + _ToolTip[_CurrentTool];
 
     }
 
@@ -108,9 +117,9 @@ public class RoverController : MonoBehaviour
 
         if (isGrounded())
         {
-            if (ControlMode == 0)
+            if (_CurrentTool == 0 || _CurrentTool == 2 || _CurrentTool == 3)
             {
-                AccelerateTowards(BaseVelocityTarget(GroundSpeed));
+                AccelerateTowards(BaseVelocityTarget(_GroundSpeed));
 
                 RotatePlayer();
             }
@@ -129,21 +138,19 @@ public class RoverController : MonoBehaviour
 
     public Vector3 BaseVelocityTarget(float Speed) // Base X & Z axis velocity target
     {
-        //return (transform.rotation * new Vector3(Input.GetAxis("Vertical"), 0, 0) * Speed);
-        //return ( * new Vector3(Input.GetAxis("Vertical"), 0, 0) * Speed);
-        return (GroundedForwards * Input.GetAxis("Vertical") * Speed);
+        return (_GroundedForwards * Input.GetAxis("Vertical") * Speed);
     }
 
     public void RotatePlayer()
     {
-        transform.Rotate(new Vector3(0, Input.GetAxis("Horizontal"), 0) * Time.deltaTime * RotSpeed);
+        transform.Rotate(new Vector3(0, Input.GetAxis("Horizontal"), 0) * Time.deltaTime * _RotSpeed);
     }
 
     public void AccelerateTowards(Vector3 Target)
     {
         Vector3 Acceleration;
         Vector3 XZVelocity;
-        XZVelocity = PlayerRB.velocity - new Vector3(0, PlayerRB.velocity.y, 0);
+        XZVelocity = _PlayerRB.velocity - new Vector3(0, _PlayerRB.velocity.y, 0);
 
         Acceleration = Target - XZVelocity;
 
@@ -154,22 +161,21 @@ public class RoverController : MonoBehaviour
             Source.Play();
         }*/
 
-        PlayerRB.AddForce(Acceleration.normalized * Mathf.Clamp(Acceleration.magnitude, 0, MaxAcceleration));
+        _PlayerRB.AddForce(Acceleration.normalized * Mathf.Clamp(Acceleration.magnitude, 0, _MaxAcceleration));
     }
 
     public bool isGrounded()
     {
-        //return Physics.Raycast(transform.position, -Vector3.up, distToGround + 0.1f);
         bool toReturn;
         RaycastHit Hit;
         toReturn = Physics.SphereCast(transform.position, .3f, -Vector3.up, out Hit, 0.4f);
-        if (Vector3.Angle(transform.up, Hit.normal) <= maxFloorAngle)
+        if (Vector3.Angle(transform.up, Hit.normal) <= _maxFloorAngle)
         {
-            GroundedForwards = Quaternion.AngleAxis(-90, transform.forward) * Hit.normal;
-            Debug.DrawLine(Hit.point, Hit.point + GroundedForwards);
+            _GroundedForwards = Quaternion.AngleAxis(-90, transform.forward) * Hit.normal;
+            Debug.DrawLine(Hit.point, Hit.point + _GroundedForwards);
         } else
         {
-            GroundedForwards = transform.forward;
+            _GroundedForwards = transform.forward;
         }        
         return toReturn;
     }

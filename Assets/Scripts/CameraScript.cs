@@ -21,6 +21,8 @@ public class CameraScript : MonoBehaviour
 
     public bool upsideDown = false;
 
+    public Transform _FinalTransform;
+
     private void Start()
     {
         initXRot = transform.eulerAngles.y;
