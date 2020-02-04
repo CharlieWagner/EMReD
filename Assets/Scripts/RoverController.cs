@@ -11,6 +11,7 @@ public class RoverController : MonoBehaviour
 
     public GameObject _Camera;//Geez I wonder what that is
     public Camera _CameraCamera;
+
     public CameraScript[] _CameraPosScript;
     
     /*public float _Vrange = 90.0f;//LIMITE vericale de la caméra
@@ -117,11 +118,14 @@ public class RoverController : MonoBehaviour
 
         if (isGrounded())
         {
-            if (_CurrentTool == 0 || _CurrentTool == 2 || _CurrentTool == 3)
+            if (_CurrentTool == 0 || _CurrentTool == 1)
             {
                 AccelerateTowards(BaseVelocityTarget(_GroundSpeed));
 
                 RotatePlayer();
+
+
+                Vector3 test = transform.rotation.eulerAngles;
             }
         }
         else
