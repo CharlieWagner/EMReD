@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: New Material
-  m_Shader: {fileID: -6465566751694194690, guid: ae3c9b04771617f4e895fe22cf888e82,
+  m_Name: TRUCMAT
+  m_Shader: {fileID: -6465566751694194690, guid: 9fa00cdb3b41e5f47b6fed9b209e927d,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -51,10 +51,10 @@ Material:
     m_Floats:
     - Vector1_1745379F: 1
     - Vector1_41860F56: 20
-    - Vector1_5EE2F6C9: 0.68
+    - Vector1_5EE2F6C9: -0.54
     - Vector1_C2AF5361: 7.72
-    - Vector1_D5469539: 1
-    - Vector1_F0243B41: 0.5
+    - Vector1_D5469539: 0.73
+    - Vector1_F0243B41: 0.1
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -77,6 +77,8 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
+    - Color_664C62B6: {r: 1, g: 0, b: 0.10779095, a: 0}
+    - Color_B3229883: {r: 1, g: 0.6280935, b: 0, a: 1}
     - _BaseColor: {r: 0, g: 0, b: 0, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
