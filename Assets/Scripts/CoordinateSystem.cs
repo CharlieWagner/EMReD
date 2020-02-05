@@ -23,30 +23,19 @@ public class CoordinateSystem : MonoBehaviour
     }
     public string Coordinates() // Defines coordinates
     {
-
         string coordinates = null;
         string zcoordinates = "";
         string xcoordinates = "";
-        //string coordinatesraw = null; // DebugRaw Coordinates
         _player = GameObject.FindGameObjectWithTag("Player").transform;
-
         _coordinateVector = _player.position - transform.position; // calculates coordinates
-
         float[] coorValues = new float[2]; // Array stocking raw coordinates values
         coorValues[0] = Mathf.Abs(_coordinateVector.x); //Absolute x values
-        coorValues[1] = Mathf.Abs(_coordinateVector.z); // Absolute z values
-                                                        //------------------------------------------------------------------------------------------------------------------------------------\\
-                                                        /*foreach (float coordinate in coorValues) // Debug Raw Coordinatess
-                                                        {
-                                                            coordinatesraw += coordinate + " ";
-                                                            Debug.Log(coordinatesraw);
-                                                        }*/
-                                                        //----------------------------------------------------------------------------------------------------------------------------------\\
+        coorValues[1] = Mathf.Abs(_coordinateVector.z); // Absolute z values                                                     
         if (!xSet || !zSet)
         {
-            for (int i = 0; i < _alphabet.Length; i++) // Set Coordinates string
+           for (int i = 0; i < _alphabet.Length; i++) // Set Coordinates string
             {
-                if (coorValues[0] <= (i + 1) * gridSize && coorValues[0] >= i * gridSize) //
+                if (coorValues[0] <= (i + 1) * gridSize && coorValues[0] >= i * gridSize)
                 {
                     int coor = i + 1;
                     xcoordinates = CoordinatesSign(_coordinateVector.x) + coor;
@@ -61,19 +50,7 @@ public class CoordinateSystem : MonoBehaviour
                 }
                 else
                     zSet = false;
-
-                //if (coorValues[1] <= (i + 1) * gridSize && coorValues[1] >= i * gridSize && i > 26)
-                //{
-                //    //int coor = i + 1;
-                //    int loops = Mathf.RoundToInt(1.0f* i / 26);
-                //    coordinates += CoordinatesSign(_coordinateVector.z) + _alphabet[i];
-                //    int todisplay = i - 26 * loops;
-                //    coordinates += _alphabet[todisplay];
-                //    ySet = true;
-                //}
-                //Debug.Log(coordinates);
             }
-
         }
         coordinates = xcoordinates + zcoordinates;
         return coordinates;
@@ -124,4 +101,24 @@ public class CoordinateSystem : MonoBehaviour
         
         UnityEditor.Handles.Label(Center, "Cell : " + X + " - " + Y);
     }
+
+
+    //------------------------------------------------------------------------------------------------------------------------------------\\
+    /*foreach (float coordinate in coorValues) // Debug Raw Coordinatess
+    {
+        coordinatesraw += coordinate + " ";
+        Debug.Log(coordinatesraw);
+    }*/
+    //----------------------------------------------------------------------------------------------------------------------------------\\
+
+    //if (coorValues[1] <= (i + 1) * gridSize && coorValues[1] >= i * gridSize && i > 26)
+    //{
+    //    //int coor = i + 1;
+    //    int loops = Mathf.RoundToInt(1.0f* i / 26);
+    //    coordinates += CoordinatesSign(_coordinateVector.z) + _alphabet[i];
+    //    int todisplay = i - 26 * loops;
+    //    coordinates += _alphabet[todisplay];
+    //    ySet = true;
+    //}
+    //Debug.Log(coordinates);
 }
