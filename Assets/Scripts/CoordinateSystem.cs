@@ -66,8 +66,13 @@ public class CoordinateSystem : MonoBehaviour
         return sign;
     }
 
-    [ExecuteInEditMode]
     private void OnDrawGizmos()
+    {
+        OnGUI();
+    }
+
+    [ExecuteInEditMode]
+    private void OnGUI()
     {
         for (int i = 0; i <= _numberOfGizmosX; i++)
         {

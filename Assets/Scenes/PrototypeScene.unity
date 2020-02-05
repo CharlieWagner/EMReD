@@ -6075,6 +6075,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e66ddfd6805289498375f743bc2f934, type: 3}
+--- !u!82 &389493515 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2141391060505717242, guid: 44eaa961c6612ba40975a6e35c869f36,
+    type: 3}
+  m_PrefabInstance: {fileID: 6999633245436118575}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &405674024
 GameObject:
   m_ObjectHideFlags: 0
@@ -17593,10 +17599,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 139476796, guid: 44eaa961c6612ba40975a6e35c869f36, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 139476797, guid: 44eaa961c6612ba40975a6e35c869f36, type: 3}
+      propertyPath: gridSize
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 139476797, guid: 44eaa961c6612ba40975a6e35c869f36, type: 3}
+      propertyPath: _numberOfGizmosX
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 139476797, guid: 44eaa961c6612ba40975a6e35c869f36, type: 3}
+      propertyPath: _numberOfGizmosY
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 983820444546710271, guid: 44eaa961c6612ba40975a6e35c869f36,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 466.88
+      value: 466.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 983820444546710271, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 181.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 983820444546710271, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -124.4
       objectReference: {fileID: 0}
     - target: {fileID: 2619130805210108002, guid: 44eaa961c6612ba40975a6e35c869f36,
         type: 3}
@@ -17868,6 +17900,22 @@ PrefabInstance:
       propertyPath: _MaxThrusterFuel
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterSoundSource
+      value: 
+      objectReference: {fileID: 389493515}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 88b4f799e550a0c49a75ea77de59afa7, type: 3}
+    - target: {fileID: 4295800380050409022, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _LaserHitFX
+      value: 
+      objectReference: {fileID: 5458316441441719188, guid: 8d3cff8663a0db640bf2c63e8238aea5,
+        type: 3}
     - target: {fileID: 5271009166389937325, guid: 44eaa961c6612ba40975a6e35c869f36,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17926,12 +17974,22 @@ PrefabInstance:
     - target: {fileID: 6449281734196364444, guid: 44eaa961c6612ba40975a6e35c869f36,
         type: 3}
       propertyPath: m_Text
-      value: 
+      value: ezGSdT
+      objectReference: {fileID: 0}
+    - target: {fileID: 6449281734196364444, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6999633243886419623, guid: 44eaa961c6612ba40975a6e35c869f36,
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6999633245146820132, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: RangeY
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 7386174802677551872, guid: 44eaa961c6612ba40975a6e35c869f36,
         type: 3}

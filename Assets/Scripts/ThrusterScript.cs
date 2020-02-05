@@ -16,6 +16,9 @@ public class ThrusterScript : MonoBehaviour
 
     public float _HoverSpeed;
 
+    public AudioSource _ThrusterSoundSource;
+    public AudioClip _ThrusterSound;
+
     public int _GaugeLength;
     public Text _ThrusterGauge;
 
@@ -33,6 +36,12 @@ public class ThrusterScript : MonoBehaviour
                 
                 _ThrusterFuel = Mathf.Clamp(_ThrusterFuel, 0, _MaxThrusterFuel);
 
+                if (Time.frameCount % 5 == 0)
+                {
+                    _ThrusterSoundSource.clip = _ThrusterSound;
+                    _ThrusterSoundSource.pitch = _ThrusterForceCurve.Evaluate(_ThrusterFuel / _MaxThrusterFuel);// + (XZVelocity.magnitude / 5);
+                    _ThrusterSoundSource.Play();
+                }
 
             }
         } else
@@ -53,6 +62,7 @@ public class ThrusterScript : MonoBehaviour
 
     public void TextUpdate()
     {
+        string WarningText = null;
         string GaugeText = null;
 
         for (int i = 0; i < _GaugeLength; i++)
@@ -63,7 +73,13 @@ public class ThrusterScript : MonoBehaviour
                 GaugeText += ".";
         }
 
-        _ThrusterGauge.text = "Thruster Fuel :" +
+        if ((Mathf.Sin(Time.time * 10) > 0) && (_ThrusterFuel <= _MaxThrusterFuel * .5f))
+            WarningText = "FUEL LOW";
+
+        Debug.Log(Time.time);
+
+        _ThrusterGauge.text = WarningText +
+                        "\n" + "\n" + "\n" + "\n" + "\n" + "\n" + "\n" + "Thruster Fuel :" +
                         "\n" + "[" + GaugeText + "]";
     }
 
