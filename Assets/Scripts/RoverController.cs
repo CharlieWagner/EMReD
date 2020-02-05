@@ -129,6 +129,14 @@ public class RoverController : MonoBehaviour
                 Lamp.SetActive(!Lamp.activeSelf);
             }
         }
+        if (Input.GetButtonUp("Fire1"))
+        {
+            if (_CurrentTool == 0)
+            {
+                GameObject Lamp = transform.GetChild(8).gameObject;
+                Lamp.SetActive(!Lamp.activeSelf);
+            }
+        }
 
     }
 
