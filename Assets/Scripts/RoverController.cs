@@ -21,7 +21,6 @@ public class RoverController : MonoBehaviour
     public float _RotSpeed;
     public float _MaxAcceleration;
     public float _AirControl;
-    public float _JetpackSpeed;
     private Vector3 _GroundedForwards;
     public float _maxFloorAngle;
 
@@ -46,16 +45,11 @@ public class RoverController : MonoBehaviour
 
     public Animator _CanvasAnim;
 
+    public ThrusterScript _Thruster;
+
+
     void Start()
     {
-        // Blabla je vais me faire merge
-
-
-
-
-
-
-        //couille
     }
     private void Update()
     {
@@ -121,37 +115,32 @@ public class RoverController : MonoBehaviour
         _HudText.text = "CURRENT TOOL : " + _ToolText[_CurrentTool] +
                 "\n" + _ToolTip[_CurrentTool];
 
-        if (Input.GetButtonDown("Fire1"))
+
+        if (_CurrentTool == 0) // LAMP
         {
-            if (_CurrentTool == 0)
-            {
-                GameObject Lamp = transform.GetChild(8).gameObject;
-                Lamp.SetActive(!Lamp.activeSelf);
-            }
+            _Tool_Lamp();
+        } else if (_CurrentTool == 1) { // THRUSTERS
+            //_Tool_Thruster();
         }
-        if (Input.GetButtonUp("Fire1"))
-        {
-            if (_CurrentTool == 0)
-            {
-                GameObject Lamp = transform.GetChild(8).gameObject;
-                Lamp.SetActive(!Lamp.activeSelf);
-            }
-        }
+
+        
 
     }
 
     void FixedUpdate()
     {
 
+        if (_CurrentTool == 1) { // THRUSTERS
+            _Thruster.Tool_Thruster();
+        }
+
+
         if (isGrounded())
         {
             if (_CurrentTool == 0 || _CurrentTool == 1)
             {
                 AccelerateTowards(BaseVelocityTarget(_GroundSpeed));
-
                 RotatePlayer();
-
-
                 Vector3 test = transform.rotation.eulerAngles;
             }
         }
@@ -210,4 +199,11 @@ public class RoverController : MonoBehaviour
         }        
         return toReturn;
     }
+
+    public void _Tool_Lamp()
+    {
+        GameObject Lamp = transform.GetChild(8).gameObject;
+        Lamp.SetActive(Input.GetButton("Fire1"));
+    }
+
 }

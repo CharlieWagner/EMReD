@@ -1055,16 +1055,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af04761b04ceb084c993ad69286dbc97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _xsens: 2
-  _ysens: 2
-  _Camera: {fileID: 0}
-  _CameraCamera: {fileID: 0}
+  _xsens: 10
+  _ysens: 10
+  _Camera: {fileID: 3043739980760681437}
+  _CameraCamera: {fileID: 3043739980760681424}
   _CameraPosScript: []
   _GroundSpeed: 0
   _RotSpeed: 0
   _MaxAcceleration: 0
   _AirControl: 0
-  _JetpackSpeed: 0
   _maxFloorAngle: 0
   _WheelRotateSpeed: 0
   _Wheels: []
@@ -1077,6 +1076,51 @@ MonoBehaviour:
   _Source: {fileID: 0}
   _PlayerRB: {fileID: 0}
   _CanvasAnim: {fileID: 0}
+  _ThrusterFuel: 7
+  _ThrusterForce:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.006190885
+      value: 0.5031128
+      inSlope: 0.03578371
+      outSlope: 0.03578371
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.36518484
+    - serializedVersion: 3
+      time: 0.28798914
+      value: 0.70683825
+      inSlope: 0.77508163
+      outSlope: 0.77508163
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.84712994
+      value: 0.8372415
+      inSlope: -0.7060129
+      outSlope: -0.7060129
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.34136122
+      outWeight: 0.81638366
+    - serializedVersion: 3
+      time: 0.9997864
+      value: 0.53795624
+      inSlope: -1.2180474
+      outSlope: -1.2180474
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.4566013
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _ThrusterDepleteRate: 0.016666668
+  _ThrusterRechargeRate: 0.016666668
 --- !u!1 &3043739981037656371
 GameObject:
   m_ObjectHideFlags: 0
