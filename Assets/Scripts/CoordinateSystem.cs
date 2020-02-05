@@ -8,50 +8,52 @@ public class CoordinateSystem : MonoBehaviour
 
     Vector3 _coordinateVector;
     Transform _player;
-    public Text CoordinateDisplay;
-    public string[] _alphabet;
+    public Text CoordinatesDisplay;
+    public string[] _alphabet; //Array of Letters for Z axis coordinates
     bool xSet = false, zSet = false;
-    public int gridSize = 10;
+    public int gridSize = 10; //Grid unit
 
 
-    public void FixedUpdate()
+    public void FixedUpdate() // UPDATE COORDINATES
     {
-        CoordinateDisplay.text = "SECTOR : " + Coordinates();
+        CoordinatesDisplay.text = "SECTOR : " + Coordinates();
     }
-    public string Coordinates()
+    public string Coordinates() // Defines coordinates
     {
         
         string coordinates = null;
-        string coordinatesraw = null;
+        string zcoordinates = "";
+        string xcoordinates = "";
+        //string coordinatesraw = null; // DebugRaw Coordinates
         _player = GameObject.FindGameObjectWithTag("Player").transform;
 
-        _coordinateVector = _player.position - transform.position;
+        _coordinateVector = _player.position - transform.position; // calculates coordinates
 
-        float[] coorValues = new float[2];
-        coorValues[0] = Mathf.Abs(_coordinateVector.x);
-        coorValues[1] = Mathf.Abs(_coordinateVector.z);
-
-        foreach (float coordinate in coorValues)
-        {
-            coordinatesraw += coordinate + " ";
-            Debug.Log(coordinatesraw);
-        }
+        float[] coorValues = new float[2]; // Array stocking raw coordinates values
+        coorValues[0] = Mathf.Abs(_coordinateVector.x); //Absolute x values
+        coorValues[1] = Mathf.Abs(_coordinateVector.z); // Absolute z values
+        //------------------------------------------------------------------------------------------------------------------------------------\\
+            /*foreach (float coordinate in coorValues) // Debug Raw Coordinatess
+            {
+                coordinatesraw += coordinate + " ";
+                Debug.Log(coordinatesraw);
+            }*/
+        //----------------------------------------------------------------------------------------------------------------------------------\\
         if (!xSet || !zSet)
         {
-            for (int i = 0; i < _alphabet.Length; i++)
+            for (int i = 0; i < _alphabet.Length; i++) // Set Coordinates string
             {
-                if (coorValues[0] <= (i + 1) * gridSize && coorValues[0] >= i * gridSize)
+                if (coorValues[0] <= (i + 1) * gridSize && coorValues[0] >= i * gridSize) //
                 {
                     int coor = i + 1;
-                    coordinates += CoordinatesSign(_coordinateVector.x) + coor;
+                    xcoordinates = CoordinatesSign(_coordinateVector.x) + coor;
                     xSet = true;
                 }
                 else
                     xSet = false;
                 if (coorValues[1] <= (i + 1) * gridSize && coorValues[1] >= i * gridSize)
                 {
-                    //int coor = i + 1;
-                    coordinates += CoordinatesSign(_coordinateVector.z) + _alphabet[i];
+                    zcoordinates = CoordinatesSign(_coordinateVector.z) + _alphabet[i];
                     zSet = true;
                 }
                 else
@@ -70,10 +72,11 @@ public class CoordinateSystem : MonoBehaviour
             }
         
         }
+        coordinates = xcoordinates + zcoordinates;
         return coordinates;
     }
 
-    public string CoordinatesSign(float testedValue)
+    public string CoordinatesSign(float testedValue) // Test for negative/positive values
     {
         string sign = "";
         if (testedValue >= 0)
