@@ -90,7 +90,7 @@ public class CoordinateSystem : MonoBehaviour
     }
 
     [ExecuteInEditMode]
-    private void OnDrawGizmosSelected()
+    private void OnDrawGizmos()
     {
         for (int i = 0; i <= _numberOfGizmosX; i++)
         {
