@@ -272,7 +272,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh65160
+  m_Name: pb_Mesh17306
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6173,6 +6173,18 @@ Transform:
   m_Father: {fileID: 1191701879}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.31}
+--- !u!114 &351560473 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6449281734196364444, guid: 44eaa961c6612ba40975a6e35c869f36,
+    type: 3}
+  m_PrefabInstance: {fileID: 6999633245436118575}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &381083530
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7592,7 +7604,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh64718
+  m_Name: pb_Mesh16864
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8895,7 +8907,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh64890
+  m_Name: pb_Mesh17036
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -18149,15 +18161,280 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 983820444546710271, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 466.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 2619130805210108002, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071069
+      objectReference: {fileID: 0}
+    - target: {fileID: 2619130805210108002, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791647838111087346, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterForce.m_Curve.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterForceCurve.m_Curve.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
         type: 3}
       propertyPath: _ThrusterRechargeRate
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
         type: 3}
       propertyPath: _ThrusterDepleteRate
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterGauge
+      value: 
+      objectReference: {fileID: 351560473}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _GaugeLength
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterForce.m_Curve.Array.data[1].time
+      value: 0.67819715
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterForce.m_Curve.Array.data[1].value
+      value: 0.89811647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterForce.m_Curve.Array.data[1].inSlope
+      value: -0.37934825
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterForce.m_Curve.Array.data[1].outSlope
+      value: -0.37934825
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterForce.m_Curve.Array.data[1].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterForce.m_Curve.Array.data[1].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterForce.m_Curve.Array.data[2].time
+      value: 0.99380493
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterForce.m_Curve.Array.data[2].value
+      value: 0.48447037
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterForce.m_Curve.Array.data[2].inSlope
+      value: -2.6511798
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterForce.m_Curve.Array.data[2].outSlope
+      value: -2.6511798
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterForce.m_Curve.Array.data[2].inWeight
+      value: 0.59505737
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterForce.m_Curve.Array.data[2].outWeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterForce.m_Curve.Array.data[0].value
+      value: 0.9890836
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterForce.m_Curve.Array.data[0].time
+      value: -0.0007024193
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterForce.m_Curve.Array.data[0].inSlope
+      value: -0.05634239
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterForce.m_Curve.Array.data[0].outSlope
+      value: -0.05634239
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterForce.m_Curve.Array.data[0].outWeight
+      value: 0.30113265
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterForce
+      value: 10.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterForceCurve.m_Curve.Array.data[0].time
+      value: -0.01544017
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterForceCurve.m_Curve.Array.data[0].value
+      value: 1.0061327
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterForceCurve.m_Curve.Array.data[0].tangentMode
+      value: 136
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterForceCurve.m_Curve.Array.data[0].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterForceCurve.m_Curve.Array.data[0].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterForceCurve.m_Curve.Array.data[1].time
+      value: 0.79063284
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterForceCurve.m_Curve.Array.data[1].value
+      value: 0.9647187
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterForceCurve.m_Curve.Array.data[1].tangentMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterForceCurve.m_Curve.Array.data[1].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterForceCurve.m_Curve.Array.data[1].outWeight
+      value: 0.71917814
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterForceCurve.m_Curve.Array.data[1].inSlope
+      value: -0.12269157
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterForceCurve.m_Curve.Array.data[1].outSlope
+      value: -0.12269157
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterForceCurve.m_Curve.Array.data[2].time
+      value: 0.9512033
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterForceCurve.m_Curve.Array.data[2].value
+      value: 0.771959
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterForceCurve.m_Curve.Array.data[2].tangentMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterForceCurve.m_Curve.Array.data[2].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterForceCurve.m_Curve.Array.data[2].outWeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterForceCurve.m_Curve.Array.data[2].inSlope
+      value: -2.8052816
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterForceCurve.m_Curve.Array.data[2].outSlope
+      value: -2.8052816
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterForceCurve.m_Curve.Array.data[3].time
+      value: 0.99380803
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterForceCurve.m_Curve.Array.data[3].value
+      value: 0.5155279
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterForceCurve.m_Curve.Array.data[3].inSlope
+      value: -10.169307
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterForceCurve.m_Curve.Array.data[3].outSlope
+      value: -10.169307
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterForceCurve.m_Curve.Array.data[3].inWeight
+      value: 0.28420362
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _ThrusterForceCurve.m_Curve.Array.data[3].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _HoverSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009404560082094560, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: _MaxThrusterFuel
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5271009166389937325, guid: 44eaa961c6612ba40975a6e35c869f36,
         type: 3}
@@ -18214,10 +18491,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6449281734196364444, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6999633243886419623, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7386174802677551872, guid: 44eaa961c6612ba40975a6e35c869f36,
         type: 3}
       propertyPath: m_Name
       value: GameEssentials
+      objectReference: {fileID: 0}
+    - target: {fileID: 9025639911922593162, guid: 44eaa961c6612ba40975a6e35c869f36,
+        type: 3}
+      propertyPath: m_Name
+      value: ThrusterDisplay
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44eaa961c6612ba40975a6e35c869f36, type: 3}

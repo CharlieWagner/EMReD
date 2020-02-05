@@ -9,9 +9,12 @@ public class ThrusterScript : MonoBehaviour
 
     public float _ThrusterFuel;
     public float _MaxThrusterFuel;
-    public AnimationCurve _ThrusterForce;
+    public AnimationCurve _ThrusterForceCurve;
+    public float _ThrusterForce;
     public float _ThrusterDepleteRate;
     public float _ThrusterRechargeRate;
+
+    public float _HoverSpeed;
 
     public int _GaugeLength;
     public Text _ThrusterGauge;
@@ -22,11 +25,15 @@ public class ThrusterScript : MonoBehaviour
         {
             if (_ThrusterFuel > 0)
             {
-                _C._PlayerRB.AddForce(Vector3.up * _ThrusterForce.Evaluate(_ThrusterFuel / _MaxThrusterFuel) * 15);
-                Debug.DrawLine(_C._Camera.transform.position + _C._Camera.transform.forward, _C._Camera.transform.position + _C._Camera.transform.forward + (Vector3.up * _ThrusterForce.Evaluate(_ThrusterFuel / _MaxThrusterFuel) * 1.5f));
+                _C._PlayerRB.AddForce(Vector3.up * _ThrusterForceCurve.Evaluate(_ThrusterFuel / _MaxThrusterFuel) * _ThrusterForce);
+
+                _C.AccelerateTowards(ThrustVelocityTarget(_HoverSpeed));
+
                 _ThrusterFuel -= _ThrusterDepleteRate * Time.fixedDeltaTime;
                 
                 _ThrusterFuel = Mathf.Clamp(_ThrusterFuel, 0, _MaxThrusterFuel);
+
+
             }
         } else
         {
@@ -58,6 +65,11 @@ public class ThrusterScript : MonoBehaviour
 
         _ThrusterGauge.text = "Thruster Fuel :" +
                         "\n" + "[" + GaugeText + "]";
+    }
+
+    public Vector3 ThrustVelocityTarget(float Speed) // Base X & Z axis velocity target
+    {
+        return ((transform.right * Input.GetAxis("Vertical") * Speed) + (transform.forward * -Input.GetAxis("Horizontal") * Speed));
     }
 
 }

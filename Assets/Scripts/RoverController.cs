@@ -137,7 +137,7 @@ public class RoverController : MonoBehaviour
 
         if (isGrounded())
         {
-            if (_CurrentTool == 0 || _CurrentTool == 1)
+            if (_CurrentTool == 0)
             {
                 AccelerateTowards(BaseVelocityTarget(_GroundSpeed));
                 RotatePlayer();
