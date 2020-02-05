@@ -13,6 +13,9 @@ public class CoordinateSystem : MonoBehaviour
     bool xSet = false, zSet = false;
     public int gridSize = 10; //Grid unit
 
+    public int _numberOfGizmosX;
+    public int _numberOfGizmosY;
+
 
     public void FixedUpdate() // UPDATE COORDINATES
     {
@@ -20,7 +23,7 @@ public class CoordinateSystem : MonoBehaviour
     }
     public string Coordinates() // Defines coordinates
     {
-        
+
         string coordinates = null;
         string zcoordinates = "";
         string xcoordinates = "";
@@ -32,13 +35,13 @@ public class CoordinateSystem : MonoBehaviour
         float[] coorValues = new float[2]; // Array stocking raw coordinates values
         coorValues[0] = Mathf.Abs(_coordinateVector.x); //Absolute x values
         coorValues[1] = Mathf.Abs(_coordinateVector.z); // Absolute z values
-        //------------------------------------------------------------------------------------------------------------------------------------\\
-            /*foreach (float coordinate in coorValues) // Debug Raw Coordinatess
-            {
-                coordinatesraw += coordinate + " ";
-                Debug.Log(coordinatesraw);
-            }*/
-        //----------------------------------------------------------------------------------------------------------------------------------\\
+                                                        //------------------------------------------------------------------------------------------------------------------------------------\\
+                                                        /*foreach (float coordinate in coorValues) // Debug Raw Coordinatess
+                                                        {
+                                                            coordinatesraw += coordinate + " ";
+                                                            Debug.Log(coordinatesraw);
+                                                        }*/
+                                                        //----------------------------------------------------------------------------------------------------------------------------------\\
         if (!xSet || !zSet)
         {
             for (int i = 0; i < _alphabet.Length; i++) // Set Coordinates string
@@ -70,7 +73,7 @@ public class CoordinateSystem : MonoBehaviour
                 //}
                 //Debug.Log(coordinates);
             }
-        
+
         }
         coordinates = xcoordinates + zcoordinates;
         return coordinates;
@@ -84,5 +87,41 @@ public class CoordinateSystem : MonoBehaviour
         else
             sign = "-";
         return sign;
+    }
+
+    [ExecuteInEditMode]
+    private void OnDrawGizmosSelected()
+    {
+        for (int i = 0; i <= _numberOfGizmosX; i++)
+        {
+            for (int j = 0; j <= _numberOfGizmosY; j++)
+            {
+                DrawRectGizmo(i, j);
+            }
+        }
+    }
+
+    void DrawRectGizmo( int X, int Y)
+    {
+        Vector3 point1 = transform.position;
+        Vector3 point2 = transform.position;
+        Vector3 point3 = transform.position;
+        Vector3 point4 = transform.position;
+
+        Vector3 Center = transform.position;
+
+        point1 += new Vector3(gridSize / 2 + (X * gridSize) - (.95f * gridSize / 2), 0, gridSize / 2 + (Y * gridSize) - (.95f * gridSize / 2));
+        point2 += new Vector3(gridSize / 2 + (X * gridSize) - (.95f * gridSize / 2), 0, gridSize / 2 + (Y * gridSize) + (.95f * gridSize / 2));
+        point3 += new Vector3(gridSize / 2 + (X * gridSize) + (.95f * gridSize / 2), 0, gridSize / 2 + (Y * gridSize) - (.95f * gridSize / 2));
+        point4 += new Vector3(gridSize / 2 + (X * gridSize) + (.95f * gridSize / 2), 0, gridSize / 2 + (Y * gridSize) + (.95f * gridSize / 2));
+
+        Center += new Vector3(gridSize / 2 + (X * gridSize), 0, gridSize / 2 + (Y * gridSize));
+
+        Debug.DrawLine(point1, point2, Color.yellow);
+        Debug.DrawLine(point2, point4, Color.yellow);
+        Debug.DrawLine(point3, point4, Color.yellow);
+        Debug.DrawLine(point3, point1, Color.yellow);
+        
+        UnityEditor.Handles.Label(Center, "Cell : " + X + " - " + Y);
     }
 }
