@@ -56,7 +56,7 @@ public class RoverController : MonoBehaviour
         if (ControlMode == 1)
         {
             
-            CameraPosScript[Current].RotateCam(Input.GetAxis("Horizontal") * Time.deltaTime * RotSpeed, Input.GetAxis("Vertical") * Time.deltaTime * RotSpeed);
+            
 
             if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
             {
@@ -106,6 +106,9 @@ public class RoverController : MonoBehaviour
         _Camera.transform.rotation = _CameraPosScript[_CurrentTool]._FinalTransform.transform.rotation;
         _CameraCamera.fieldOfView  = _CameraPosScript[_CurrentTool].fov;
 
+        // ACTIVE CAMERA QUAND NECESSAIRE
+        if (_CurrentTool == 1 || _CurrentTool == 2 || _CurrentTool == 3)
+            _CameraPosScript[_CurrentTool].RotateCam(Input.GetAxis("Horizontal") * Time.deltaTime * _RotSpeed, Input.GetAxis("Vertical") * Time.deltaTime * _RotSpeed);
 
 
         _HudText.text = "CURRENT TOOL : " + _ToolText[_CurrentTool] +
