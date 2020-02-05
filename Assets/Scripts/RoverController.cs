@@ -121,6 +121,15 @@ public class RoverController : MonoBehaviour
         _HudText.text = "CURRENT TOOL : " + _ToolText[_CurrentTool] +
                 "\n" + _ToolTip[_CurrentTool];
 
+        if (Input.GetButtonDown("Fire1"))
+        {
+            if (_CurrentTool == 0)
+            {
+                GameObject Lamp = transform.GetChild(8).gameObject;
+                Lamp.SetActive(!Lamp.activeSelf);
+            }
+        }
+
     }
 
     void FixedUpdate()
