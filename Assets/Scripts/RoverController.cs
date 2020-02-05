@@ -46,6 +46,7 @@ public class RoverController : MonoBehaviour
     public Animator _CanvasAnim;
 
     public ThrusterScript _Thruster;
+    public LaserScript _Laser;
 
 
     void Start()
@@ -133,7 +134,12 @@ public class RoverController : MonoBehaviour
         if (_CurrentTool == 1) { // THRUSTERS
             _Thruster.Tool_Thruster();
         }
-
+        else
+        {
+            _Thruster.EmptyGauge();
+        }
+        if (_CurrentTool == 2)
+            _Laser.Tool_Laser();
 
         if (isGrounded())
         {

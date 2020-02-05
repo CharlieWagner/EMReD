@@ -67,6 +67,11 @@ public class ThrusterScript : MonoBehaviour
                         "\n" + "[" + GaugeText + "]";
     }
 
+    public void EmptyGauge()
+    {
+        _ThrusterGauge.text = null;
+    }
+
     public Vector3 ThrustVelocityTarget(float Speed) // Base X & Z axis velocity target
     {
         return ((transform.right * Input.GetAxis("Vertical") * Speed) + (transform.forward * -Input.GetAxis("Horizontal") * Speed));
