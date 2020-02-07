@@ -104,7 +104,7 @@ public class CoordinateSystem : MonoBehaviour
         Debug.DrawLine(point3, point4, Color.yellow);
         Debug.DrawLine(point3, point1, Color.yellow);
         
-        UnityEditor.Handles.Label(Center, "Cell : " + X + " - " + Y);
+        //UnityEditor.Handles.Label(Center, "Cell : " + X + " - " + Y);
     }
 
 
