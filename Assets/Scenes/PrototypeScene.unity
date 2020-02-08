@@ -96,6 +96,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 70b6dd7fe864ac247ac2655f741c289e,
     type: 2}
   m_UseShadowmask: 0
@@ -173,6 +174,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -307,10 +309,20 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: ae086edd41e32224ab7c420d1df96fab, type: 2}
+    - target: {fileID: -1504981713932161579, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a92d59a2ad201bf41ad99ba9d8fb2b19, type: 2}
     - target: {fileID: -927199367670048503, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
         type: 3}
       propertyPath: m_Name
       value: Fern_Small (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5, type: 3}
@@ -514,6 +526,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GroundPlant03 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: de57c5129e0720541a8c82a68be383c0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de57c5129e0720541a8c82a68be383c0, type: 3}
 --- !u!4 &68777882 stripped
@@ -614,6 +631,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fern_Tall (3)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 4dce0e6682a1802418ff28b4cc1787be,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dce0e6682a1802418ff28b4cc1787be, type: 3}
 --- !u!4 &79180277 stripped
@@ -708,6 +730,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fern_Small (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5, type: 3}
@@ -899,6 +926,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock07_Slab (3)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 1a3acccc73ee506488f3560539c5edaa,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a3acccc73ee506488f3560539c5edaa, type: 3}
 --- !u!4 &104163908 stripped
@@ -993,6 +1025,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock05_Outcrop (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 5d01a224b5445a34790175cd427d8a83,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d01a224b5445a34790175cd427d8a83, type: 3}
@@ -1095,6 +1132,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock07_Slab (16)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 1a3acccc73ee506488f3560539c5edaa,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a3acccc73ee506488f3560539c5edaa, type: 3}
 --- !u!1 &114986804
@@ -1143,6 +1185,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1471,6 +1514,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fern_Small (5)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5, type: 3}
 --- !u!4 &136183705 stripped
@@ -1566,6 +1614,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock07_Slab (14)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 1a3acccc73ee506488f3560539c5edaa,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a3acccc73ee506488f3560539c5edaa, type: 3}
 --- !u!1 &161101612
@@ -1614,6 +1667,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1941,6 +1995,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock04_Tall (9)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 97a669b335fb4f04d9a9b8e36ee55685,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97a669b335fb4f04d9a9b8e36ee55685, type: 3}
 --- !u!4 &186350041 stripped
@@ -2010,6 +2069,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2123,7 +2183,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 893f201deae98cb4a8d96a6dcba3f12a, type: 2}
+      objectReference: {fileID: 2100000, guid: 1d25574ab6a571f4b99f91f4257c3b71, type: 2}
     - target: {fileID: -927199367670048503, guid: de57c5129e0720541a8c82a68be383c0,
         type: 3}
       propertyPath: m_Name
@@ -2217,6 +2277,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock06_Slab (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 9d3b116f734ee304eaa17796b58bfc9c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d3b116f734ee304eaa17796b58bfc9c, type: 3}
@@ -2508,6 +2573,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree03_Foliage (1)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 841a9345be643a646ba2405b70519c2b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 841a9345be643a646ba2405b70519c2b, type: 3}
 --- !u!4 &214313578 stripped
@@ -2698,6 +2768,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock07_Slab (5)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 1a3acccc73ee506488f3560539c5edaa,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a3acccc73ee506488f3560539c5edaa, type: 3}
 --- !u!4 &221527400 stripped
@@ -2792,6 +2867,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock04_Tall (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 97a669b335fb4f04d9a9b8e36ee55685,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97a669b335fb4f04d9a9b8e36ee55685, type: 3}
@@ -2899,6 +2979,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree07_Foliage_Small (1)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 802e9acf69228224f95483a46fde8a89,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 802e9acf69228224f95483a46fde8a89, type: 3}
 --- !u!4 &231017927 stripped
@@ -2999,6 +3084,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree05_Foliage (2)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: f2209f9700e895342b02d797adba2cef,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2209f9700e895342b02d797adba2cef, type: 3}
 --- !u!4 &236454944 stripped
@@ -3094,6 +3184,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock05_Outcrop (4)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 5d01a224b5445a34790175cd427d8a83,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d01a224b5445a34790175cd427d8a83, type: 3}
 --- !u!1001 &247417593
@@ -3183,6 +3278,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock04_Tall (8)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 97a669b335fb4f04d9a9b8e36ee55685,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97a669b335fb4f04d9a9b8e36ee55685, type: 3}
 --- !u!4 &247417594 stripped
@@ -3197,6 +3297,70 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1974447280}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &274559177
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 274559179}
+  - component: {fileID: 274559178}
+  m_Layer: 0
+  m_Name: Reflection Probe (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!215 &274559178
+ReflectionProbe:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274559177}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Type: 0
+  m_Mode: 0
+  m_RefreshMode: 0
+  m_TimeSlicingMode: 0
+  m_Resolution: 128
+  m_UpdateFrequency: 0
+  m_BoxSize: {x: 100, y: 100, z: 100}
+  m_BoxOffset: {x: 0, y: 0, z: 0}
+  m_NearClip: 0.3
+  m_FarClip: 1000
+  m_ShadowDistance: 100
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IntensityMultiplier: 1
+  m_BlendDistance: 1
+  m_HDR: 1
+  m_BoxProjection: 0
+  m_RenderDynamicObjects: 0
+  m_UseOcclusionCulling: 1
+  m_Importance: 1
+  m_CustomBakedTexture: {fileID: 0}
+--- !u!4 &274559179
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274559177}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 34.71, y: 3.74, z: -4.69}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &276696021
 GameObject:
   m_ObjectHideFlags: 0
@@ -3353,10 +3517,20 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: ae086edd41e32224ab7c420d1df96fab, type: 2}
+    - target: {fileID: -1504981713932161579, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a92d59a2ad201bf41ad99ba9d8fb2b19, type: 2}
     - target: {fileID: -927199367670048503, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
         type: 3}
       propertyPath: m_Name
       value: Fern_Small (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5, type: 3}
@@ -3549,10 +3723,20 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: ae086edd41e32224ab7c420d1df96fab, type: 2}
+    - target: {fileID: -1504981713932161579, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a92d59a2ad201bf41ad99ba9d8fb2b19, type: 2}
     - target: {fileID: -927199367670048503, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
         type: 3}
       propertyPath: m_Name
       value: Fern_Small (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5, type: 3}
@@ -3608,6 +3792,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3741,6 +3926,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock04_Tall (6)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 97a669b335fb4f04d9a9b8e36ee55685,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97a669b335fb4f04d9a9b8e36ee55685, type: 3}
 --- !u!4 &339614456 stripped
@@ -3755,7 +3945,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17162
+  m_Name: pb_Mesh31222
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6080,6 +6270,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6125,7 +6316,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &418328979
 PrefabInstance:
@@ -6792,6 +6983,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock06_Slab (3)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 9d3b116f734ee304eaa17796b58bfc9c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d3b116f734ee304eaa17796b58bfc9c, type: 3}
 --- !u!4 &482303553 stripped
@@ -6861,6 +7057,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6991,6 +7188,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fern_Tall (4)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 4dce0e6682a1802418ff28b4cc1787be,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dce0e6682a1802418ff28b4cc1787be, type: 3}
 --- !u!4 &502802507 stripped
@@ -7091,8 +7293,105 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fern_Tall (8)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 4dce0e6682a1802418ff28b4cc1787be,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dce0e6682a1802418ff28b4cc1787be, type: 3}
+--- !u!1 &528005867
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 528005868}
+  - component: {fileID: 528005869}
+  m_Layer: 0
+  m_Name: Point Light (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &528005868
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528005867}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -12.29, y: 4.73, z: -11.27}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1073480972}
+  m_RootOrder: 93
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &528005869
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528005867}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Intensity: 15
+  m_Range: 20
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.02
+    m_NormalBias: 0.1
+    m_NearPlane: 0.1
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 0
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1001 &529866817
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7174,6 +7473,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Plants02 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 2c582be5bff3a2b4a8dde4c69d9da119,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c582be5bff3a2b4a8dde4c69d9da119, type: 3}
@@ -7269,6 +7573,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock05_Outcrop (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 5d01a224b5445a34790175cd427d8a83,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d01a224b5445a34790175cd427d8a83, type: 3}
@@ -7454,6 +7763,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock04_Tall (11)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 97a669b335fb4f04d9a9b8e36ee55685,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97a669b335fb4f04d9a9b8e36ee55685, type: 3}
 --- !u!4 &572036666 stripped
@@ -7623,6 +7937,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock07_Slab (13)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 1a3acccc73ee506488f3560539c5edaa,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a3acccc73ee506488f3560539c5edaa, type: 3}
 --- !u!1001 &624509686
@@ -7707,10 +8026,20 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: ae086edd41e32224ab7c420d1df96fab, type: 2}
+    - target: {fileID: -1504981713932161579, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a92d59a2ad201bf41ad99ba9d8fb2b19, type: 2}
     - target: {fileID: -927199367670048503, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
         type: 3}
       propertyPath: m_Name
       value: Fern_Small (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5, type: 3}
@@ -7907,6 +8236,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GroundPlant03 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: de57c5129e0720541a8c82a68be383c0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de57c5129e0720541a8c82a68be383c0, type: 3}
 --- !u!4 &627060248 stripped
@@ -8091,6 +8425,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock04_Tall (2)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 97a669b335fb4f04d9a9b8e36ee55685,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97a669b335fb4f04d9a9b8e36ee55685, type: 3}
 --- !u!4 &647196067 stripped
@@ -8191,6 +8530,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree06_Foliage (1)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 295c2bc7f0e3350469fff759f383b623,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 295c2bc7f0e3350469fff759f383b623, type: 3}
 --- !u!1 &649815728
@@ -8232,8 +8576,9 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 649815728}
   m_Enabled: 1
-  serializedVersion: 9
+  serializedVersion: 10
   m_Type: 2
+  m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
   m_Intensity: 20
   m_Range: 20
@@ -8603,6 +8948,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock04_Tall (3)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 97a669b335fb4f04d9a9b8e36ee55685,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97a669b335fb4f04d9a9b8e36ee55685, type: 3}
 --- !u!4 &684522714 stripped
@@ -8751,8 +9101,9 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 709425796}
   m_Enabled: 1
-  serializedVersion: 9
+  serializedVersion: 10
   m_Type: 2
+  m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
   m_Intensity: 20
   m_Range: 20
@@ -8944,6 +9295,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -9077,6 +9429,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock07_Slab (9)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 1a3acccc73ee506488f3560539c5edaa,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a3acccc73ee506488f3560539c5edaa, type: 3}
 --- !u!4 &727671673 stripped
@@ -9189,6 +9546,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree04_Foliage (5)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: c0d13208a82954c4c9458c76d90cb836,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0d13208a82954c4c9458c76d90cb836, type: 3}
 --- !u!1 &745959096
@@ -9230,8 +9592,9 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 745959096}
   m_Enabled: 1
-  serializedVersion: 9
+  serializedVersion: 10
   m_Type: 2
+  m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
   m_Intensity: 20
   m_Range: 20
@@ -9386,6 +9749,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock07_Slab (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 1a3acccc73ee506488f3560539c5edaa,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a3acccc73ee506488f3560539c5edaa, type: 3}
@@ -9575,6 +9943,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fern_Tall (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 4dce0e6682a1802418ff28b4cc1787be,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dce0e6682a1802418ff28b4cc1787be, type: 3}
@@ -9926,6 +10299,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -10018,6 +10392,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -10359,6 +10734,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -10546,6 +10922,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -10685,6 +11062,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock04_Tall (13)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 97a669b335fb4f04d9a9b8e36ee55685,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97a669b335fb4f04d9a9b8e36ee55685, type: 3}
 --- !u!4 &882905005 stripped
@@ -10779,6 +11161,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock07_Slab (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 1a3acccc73ee506488f3560539c5edaa,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a3acccc73ee506488f3560539c5edaa, type: 3}
@@ -10964,10 +11351,20 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: ae086edd41e32224ab7c420d1df96fab, type: 2}
+    - target: {fileID: -1504981713932161579, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a92d59a2ad201bf41ad99ba9d8fb2b19, type: 2}
     - target: {fileID: -927199367670048503, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
         type: 3}
       propertyPath: m_Name
       value: Fern_Small (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5, type: 3}
@@ -11059,10 +11456,20 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: ae086edd41e32224ab7c420d1df96fab, type: 2}
+    - target: {fileID: -1504981713932161579, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a92d59a2ad201bf41ad99ba9d8fb2b19, type: 2}
     - target: {fileID: -927199367670048503, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
         type: 3}
       propertyPath: m_Name
       value: Fern_Small (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5, type: 3}
@@ -11171,6 +11578,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock07_Slab (8)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 1a3acccc73ee506488f3560539c5edaa,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a3acccc73ee506488f3560539c5edaa, type: 3}
 --- !u!4 &941352229 stripped
@@ -11266,6 +11678,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock06_Slab (5)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 9d3b116f734ee304eaa17796b58bfc9c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d3b116f734ee304eaa17796b58bfc9c, type: 3}
 --- !u!1001 &961459871
@@ -11354,6 +11771,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock07_Slab (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 1a3acccc73ee506488f3560539c5edaa,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a3acccc73ee506488f3560539c5edaa, type: 3}
@@ -11788,6 +12210,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock02 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: d5a64dcec42c99743b01741652f80043,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5a64dcec42c99743b01741652f80043, type: 3}
 --- !u!4 &988155700 stripped
@@ -12030,7 +12457,7 @@ Transform:
   - {fileID: 969431146}
   - {fileID: 207697911}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1036267920
 PrefabInstance:
@@ -13233,6 +13660,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -13279,7 +13707,7 @@ Transform:
   - {fileID: 869069644}
   - {fileID: 484490175}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1062649959
 PrefabInstance:
@@ -13501,8 +13929,10 @@ Transform:
   - {fileID: 665266565}
   - {fileID: 1263276905}
   - {fileID: 1181855633}
+  - {fileID: 1363424837}
+  - {fileID: 528005868}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 75, z: 0}
 --- !u!1001 &1084726272
 PrefabInstance:
@@ -13690,6 +14120,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree03_Foliage (2)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 841a9345be643a646ba2405b70519c2b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 841a9345be643a646ba2405b70519c2b, type: 3}
 --- !u!4 &1086892694 stripped
@@ -13790,6 +14225,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fern_Tall (6)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 4dce0e6682a1802418ff28b4cc1787be,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dce0e6682a1802418ff28b4cc1787be, type: 3}
 --- !u!4 &1105150929 stripped
@@ -13884,6 +14324,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GroundPlant03 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: de57c5129e0720541a8c82a68be383c0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de57c5129e0720541a8c82a68be383c0, type: 3}
@@ -13986,6 +14431,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fern_Small (4)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5, type: 3}
 --- !u!4 &1137012796 stripped
@@ -14081,6 +14531,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fern_Small (3)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5, type: 3}
 --- !u!4 &1139373050 stripped
@@ -14175,6 +14630,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock05_Outcrop (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 5d01a224b5445a34790175cd427d8a83,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d01a224b5445a34790175cd427d8a83, type: 3}
@@ -14360,6 +14820,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock07_Slab (6)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 1a3acccc73ee506488f3560539c5edaa,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a3acccc73ee506488f3560539c5edaa, type: 3}
 --- !u!4 &1157651240 stripped
@@ -14427,6 +14892,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -14473,7 +14939,7 @@ Transform:
   - {fileID: 1695586594}
   - {fileID: 465445315}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1181835024
 Rigidbody:
@@ -14584,6 +15050,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fern_Small (18)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5, type: 3}
 --- !u!1 &1191587130
@@ -14678,7 +15149,7 @@ Transform:
   - {fileID: 878610360}
   - {fileID: 851014134}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1198365678 stripped
 Transform:
@@ -14767,6 +15238,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fern_Small (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5, type: 3}
@@ -14911,6 +15387,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -15050,6 +15527,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock07_Slab (12)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 1a3acccc73ee506488f3560539c5edaa,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a3acccc73ee506488f3560539c5edaa, type: 3}
 --- !u!4 &1259132727 stripped
@@ -15156,6 +15638,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree04_Foliage (2)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: c0d13208a82954c4c9458c76d90cb836,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0d13208a82954c4c9458c76d90cb836, type: 3}
 --- !u!4 &1283959371 stripped
@@ -15203,8 +15690,9 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1295374959}
   m_Enabled: 1
-  serializedVersion: 9
+  serializedVersion: 10
   m_Type: 2
+  m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
   m_Intensity: 20
   m_Range: 20
@@ -15341,6 +15829,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock05_Outcrop (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 5d01a224b5445a34790175cd427d8a83,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d01a224b5445a34790175cd427d8a83, type: 3}
@@ -15805,10 +16298,20 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: ae086edd41e32224ab7c420d1df96fab, type: 2}
+    - target: {fileID: -1504981713932161579, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a92d59a2ad201bf41ad99ba9d8fb2b19, type: 2}
     - target: {fileID: -927199367670048503, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
         type: 3}
       propertyPath: m_Name
       value: Fern_Small (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5, type: 3}
@@ -16096,6 +16599,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock07_Slab (7)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 1a3acccc73ee506488f3560539c5edaa,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a3acccc73ee506488f3560539c5edaa, type: 3}
 --- !u!4 &1341350129 stripped
@@ -16252,10 +16760,20 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: ae086edd41e32224ab7c420d1df96fab, type: 2}
+    - target: {fileID: -1504981713932161579, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a92d59a2ad201bf41ad99ba9d8fb2b19, type: 2}
     - target: {fileID: -927199367670048503, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
         type: 3}
       propertyPath: m_Name
       value: Fern_Small (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5, type: 3}
@@ -16352,6 +16870,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock07_Slab (10)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 1a3acccc73ee506488f3560539c5edaa,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a3acccc73ee506488f3560539c5edaa, type: 3}
 --- !u!4 &1353403242 stripped
@@ -16399,8 +16922,9 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1358026626}
   m_Enabled: 1
-  serializedVersion: 9
+  serializedVersion: 10
   m_Type: 0
+  m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
   m_Intensity: 96.3
   m_Range: 60.2
@@ -16497,6 +17021,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -16549,6 +17074,98 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1183191770}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1363424836
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1363424837}
+  - component: {fileID: 1363424838}
+  m_Layer: 0
+  m_Name: Point Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1363424837
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363424836}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.01, y: 3.55, z: -16.29}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1073480972}
+  m_RootOrder: 92
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &1363424838
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363424836}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Intensity: 15
+  m_Range: 20
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.02
+    m_NormalBias: 0.1
+    m_NearPlane: 0.1
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 0
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &1372002780
 GameObject:
   m_ObjectHideFlags: 0
@@ -16662,10 +17279,20 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: ae086edd41e32224ab7c420d1df96fab, type: 2}
+    - target: {fileID: -1504981713932161579, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a92d59a2ad201bf41ad99ba9d8fb2b19, type: 2}
     - target: {fileID: -927199367670048503, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
         type: 3}
       propertyPath: m_Name
       value: Fern_Small (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5, type: 3}
@@ -16807,7 +17434,7 @@ Transform:
   - {fileID: 767233730}
   - {fileID: 2078880379}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1413223716
 PrefabInstance:
@@ -16991,6 +17618,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fern_Small (2)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5, type: 3}
 --- !u!4 &1430153196 stripped
@@ -17051,6 +17683,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -17179,10 +17812,20 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: ae086edd41e32224ab7c420d1df96fab, type: 2}
+    - target: {fileID: -1504981713932161579, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a92d59a2ad201bf41ad99ba9d8fb2b19, type: 2}
     - target: {fileID: -927199367670048503, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
         type: 3}
       propertyPath: m_Name
       value: Fern_Small (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5, type: 3}
@@ -17272,6 +17915,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock07_Slab (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 1a3acccc73ee506488f3560539c5edaa,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a3acccc73ee506488f3560539c5edaa, type: 3}
@@ -17457,6 +18105,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock06_Slab (4)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 9d3b116f734ee304eaa17796b58bfc9c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d3b116f734ee304eaa17796b58bfc9c, type: 3}
 --- !u!1001 &1484945149
@@ -17545,6 +18198,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock07_Slab (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 1a3acccc73ee506488f3560539c5edaa,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a3acccc73ee506488f3560539c5edaa, type: 3}
@@ -17640,6 +18298,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock07_Slab (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 1a3acccc73ee506488f3560539c5edaa,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a3acccc73ee506488f3560539c5edaa, type: 3}
@@ -17824,6 +18487,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock04_Tall (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 97a669b335fb4f04d9a9b8e36ee55685,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97a669b335fb4f04d9a9b8e36ee55685, type: 3}
@@ -18010,10 +18678,20 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: ae086edd41e32224ab7c420d1df96fab, type: 2}
+    - target: {fileID: -1504981713932161579, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a92d59a2ad201bf41ad99ba9d8fb2b19, type: 2}
     - target: {fileID: -927199367670048503, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
         type: 3}
       propertyPath: m_Name
       value: Fern_Small (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5, type: 3}
@@ -18056,7 +18734,7 @@ Transform:
   - {fileID: 1772272452}
   - {fileID: 2033810715}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &1549640522
 MonoBehaviour:
@@ -18365,6 +19043,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree04_Foliage (3)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: c0d13208a82954c4c9458c76d90cb836,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0d13208a82954c4c9458c76d90cb836, type: 3}
 --- !u!4 &1605179630 stripped
@@ -18502,6 +19185,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tree04_Foliage (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: c0d13208a82954c4c9458c76d90cb836,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0d13208a82954c4c9458c76d90cb836, type: 3}
@@ -18776,6 +19464,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock04_Tall (4)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 97a669b335fb4f04d9a9b8e36ee55685,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97a669b335fb4f04d9a9b8e36ee55685, type: 3}
 --- !u!4 &1655616781 stripped
@@ -18815,7 +19508,7 @@ Transform:
   - {fileID: 1191587131}
   - {fileID: 276696023}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1001 &1670930164
 PrefabInstance:
@@ -19282,6 +19975,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GroundPlant03 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: de57c5129e0720541a8c82a68be383c0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de57c5129e0720541a8c82a68be383c0, type: 3}
 --- !u!4 &1683857079 stripped
@@ -19425,6 +20123,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -19517,6 +20216,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -19645,10 +20345,20 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: ae086edd41e32224ab7c420d1df96fab, type: 2}
+    - target: {fileID: -1504981713932161579, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a92d59a2ad201bf41ad99ba9d8fb2b19, type: 2}
     - target: {fileID: -927199367670048503, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
         type: 3}
       propertyPath: m_Name
       value: Fern_Small (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5, type: 3}
@@ -19738,6 +20448,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock06_Slab (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 9d3b116f734ee304eaa17796b58bfc9c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d3b116f734ee304eaa17796b58bfc9c, type: 3}
@@ -19897,6 +20612,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -20128,6 +20844,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fern_Tall (7)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 4dce0e6682a1802418ff28b4cc1787be,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dce0e6682a1802418ff28b4cc1787be, type: 3}
 --- !u!1 &1768681071
@@ -20169,8 +20890,9 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1768681071}
   m_Enabled: 1
-  serializedVersion: 9
+  serializedVersion: 10
   m_Type: 2
+  m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
   m_Intensity: 20
   m_Range: 20
@@ -20267,6 +20989,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -20400,6 +21123,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock07_Slab (1)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 1a3acccc73ee506488f3560539c5edaa,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a3acccc73ee506488f3560539c5edaa, type: 3}
 --- !u!4 &1783051792 stripped
@@ -20496,10 +21224,20 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: ae086edd41e32224ab7c420d1df96fab, type: 2}
+    - target: {fileID: -1504981713932161579, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a92d59a2ad201bf41ad99ba9d8fb2b19, type: 2}
     - target: {fileID: -927199367670048503, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
         type: 3}
       propertyPath: m_Name
       value: Fern_Small (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5, type: 3}
@@ -20555,6 +21293,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -20687,6 +21426,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock04_Tall (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 97a669b335fb4f04d9a9b8e36ee55685,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97a669b335fb4f04d9a9b8e36ee55685, type: 3}
@@ -20973,6 +21717,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plants03 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 5c62c5aac16839b4fafe52261e997cf9,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c62c5aac16839b4fafe52261e997cf9, type: 3}
 --- !u!4 &1856916237 stripped
@@ -21068,6 +21817,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GroundPlant03 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: de57c5129e0720541a8c82a68be383c0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de57c5129e0720541a8c82a68be383c0, type: 3}
 --- !u!4 &1866343229 stripped
@@ -21133,7 +21887,7 @@ Transform:
   - {fileID: 24664780}
   - {fileID: 1690543903}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1897942736
 PrefabInstance:
@@ -21222,6 +21976,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock05_Outcrop (2)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 5d01a224b5445a34790175cd427d8a83,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d01a224b5445a34790175cd427d8a83, type: 3}
 --- !u!4 &1897942737 stripped
@@ -21276,6 +22035,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -21414,6 +22174,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree05_Foliage (1)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: f2209f9700e895342b02d797adba2cef,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2209f9700e895342b02d797adba2cef, type: 3}
 --- !u!4 &1909736751 stripped
@@ -21468,6 +22233,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -21560,6 +22326,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -21692,6 +22459,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock04_Tall (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 97a669b335fb4f04d9a9b8e36ee55685,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97a669b335fb4f04d9a9b8e36ee55685, type: 3}
@@ -21894,6 +22666,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tree06_Foliage (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 295c2bc7f0e3350469fff759f383b623,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 295c2bc7f0e3350469fff759f383b623, type: 3}
@@ -25840,6 +26617,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -25894,7 +26672,7 @@ Transform:
   - {fileID: 1623004463}
   - {fileID: 195235756}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1964411403
 PrefabInstance:
@@ -25982,6 +26760,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock04_Tall (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 97a669b335fb4f04d9a9b8e36ee55685,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97a669b335fb4f04d9a9b8e36ee55685, type: 3}
@@ -26177,6 +26960,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 665cdf0a84320c14082464cec91318d0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 665cdf0a84320c14082464cec91318d0, type: 3}
@@ -26446,10 +27234,20 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: ae086edd41e32224ab7c420d1df96fab, type: 2}
+    - target: {fileID: -1504981713932161579, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a92d59a2ad201bf41ad99ba9d8fb2b19, type: 2}
     - target: {fileID: -927199367670048503, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
         type: 3}
       propertyPath: m_Name
       value: Fern_Small (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bd7dd0d03c72ba47818ce3955e8f5f5, type: 3}
@@ -26505,6 +27303,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -26563,7 +27362,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17684
+  m_Name: pb_Mesh32032
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -26817,6 +27616,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GroundPlant03 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: de57c5129e0720541a8c82a68be383c0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de57c5129e0720541a8c82a68be383c0, type: 3}
 --- !u!4 &2010793309 stripped
@@ -27040,6 +27844,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -27084,7 +27889,7 @@ Transform:
   m_LocalScale: {x: 1.9525, y: 1.9525, z: 1.9525}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: -179.99998, z: 0}
 --- !u!4 &2033810715 stripped
 Transform:
@@ -27098,7 +27903,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17380
+  m_Name: pb_Mesh31550
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -27346,6 +28151,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tree04_Foliage (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: c0d13208a82954c4c9458c76d90cb836,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0d13208a82954c4c9458c76d90cb836, type: 3}
@@ -27643,6 +28453,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fern_Tall (5)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 4dce0e6682a1802418ff28b4cc1787be,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dce0e6682a1802418ff28b4cc1787be, type: 3}
 --- !u!4 &2090229183 stripped
@@ -27689,8 +28504,9 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2138677391}
   m_Enabled: 1
-  serializedVersion: 9
+  serializedVersion: 10
   m_Type: 1
+  m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 3
   m_Range: 10
