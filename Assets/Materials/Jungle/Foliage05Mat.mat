@@ -7,45 +7,37 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MossyRockTest 1
-  m_Shader: {fileID: -6465566751694194690, guid: a24a59b4fe71a9741bd9ea18e5167530,
+  m_Name: Foliage05Mat
+  m_Shader: {fileID: -6465566751694194690, guid: 8aa2ebdf82c266641b472a7e3a7cdc67,
     type: 3}
-  m_ShaderKeywords: _ENVIRONMENTREFLECTIONS_OFF
+  m_ShaderKeywords: _ALPHATEST_ON _METALLICSPECGLOSSMAP _NORMALMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
+  m_DoubleSidedGI: 1
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - Texture2D_393A90FF:
-        m_Texture: {fileID: 2800000, guid: 01c4a4f64765a614fac4138cd71987c1, type: 3}
+    - Texture2D_20B90CC1:
+        m_Texture: {fileID: 2800000, guid: b5bba499c92154d4eab6bbfdaa007d6d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - Texture2D_4AF4922D:
-        m_Texture: {fileID: 2800000, guid: 914ef569ee9f8264d8b9517ca1616ff5, type: 3}
+    - Texture2D_9343D763:
+        m_Texture: {fileID: 2800000, guid: 15e7ced1b93aad24ea38623659f10000, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - Texture2D_5A611E87:
-        m_Texture: {fileID: 2800000, guid: 0e558ada5a26b67438ae4c2d4ef5fb2d, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - Texture2D_9F819050:
-        m_Texture: {fileID: 2800000, guid: d23a83a46c0ef66408a01fdc39906fca, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - Texture2D_EAA8FBDB:
-        m_Texture: {fileID: 0}
+    - Texture2D_A0697F3B:
+        m_Texture: {fileID: 2800000, guid: a0cd7c9177fd5574586c7ddb538a227f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+        m_Texture: {fileID: 2800000, guid: bdcaa3cedc8655245b8676b740900550, type: 3}
+        m_Scale: {x: 0.95, y: 0.95}
+        m_Offset: {x: 0, y: 0.09}
     - _BumpMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 16f6c6b9eb262ee45b3f57b760dcec34, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
@@ -53,11 +45,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+        m_Texture: {fileID: 2800000, guid: bdcaa3cedc8655245b8676b740900550, type: 3}
+        m_Scale: {x: 0.95, y: 0.95}
+        m_Offset: {x: 0, y: 0.09}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: b863880be61af0347b83b59010962c7a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -69,19 +61,18 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_4D582654: 0.65
-    - Vector1_541887E9: -1
-    - Vector1_71436159: 300
-    - Vector1_71872BBF: 0.257
-    - Vector1_722FF740: 0.064
-    - Vector1_D77DDB26: 300
-    - _AlphaClip: 0
+    - Vector1_2ECF11B9: 0.1
+    - Vector1_6054220D: 0
+    - Vector1_6741711: 0.2
+    - Vector1_E6F0B45F: 5
+    - Vector1_EEDBEBB5: 0
+    - _AlphaClip: 1
     - _Blend: 0
     - _BumpScale: 1
-    - _Cull: 2
+    - _Cull: 0
     - _Cutoff: 0.5
     - _DstBlend: 0
-    - _EnvironmentReflections: 0
+    - _EnvironmentReflections: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
@@ -97,13 +88,14 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_70C1BA0F: {r: 0.8396226, g: 0.107185856, b: 0, a: 1}
-    - Color_9903511: {r: 0.3554201, g: 0.4254818, b: 0.46226418, a: 0}
-    - _BaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - Color_8E9FB516: {r: 0.6792453, g: 0.0993236, b: 0.108480275, a: 1}
+    - Vector2_3CED340F: {r: 1, g: 1, b: 0, a: 0}
+    - Vector2_8C6EADB1: {r: 0, g: 0.08, b: 0, a: 0}
+    - _BaseColor: {r: 1, g: 0, b: 0.18431377, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
---- !u!114 &2710926030822248396
+--- !u!114 &4929476046846596631
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

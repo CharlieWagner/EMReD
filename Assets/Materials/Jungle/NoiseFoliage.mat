@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-97476313776465863
+--- !u!114 &-2883830524571215204
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: FoliageTest
-  m_Shader: {fileID: -6465566751694194690, guid: 8aa2ebdf82c266641b472a7e3a7cdc67,
+  m_Name: NoiseFoliage
+  m_Shader: {fileID: -6465566751694194690, guid: fe073459d0b09584799692bc00c14e9b,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -33,18 +33,6 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - Texture2D_20B90CC1:
-        m_Texture: {fileID: 2800000, guid: bdcaa3cedc8655245b8676b740900550, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - Texture2D_9343D763:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - Texture2D_A0697F3B:
-        m_Texture: {fileID: 2800000, guid: 16f6c6b9eb262ee45b3f57b760dcec34, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -69,23 +57,18 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_CEE80A7E_Texture_1:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_F99FC95C_Texture_1:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_2ECF11B9: -0.3
-    - Vector1_6054220D: 0
+    - Vector1_2ECF11B9: 0.01
     - Vector1_6741711: 0.2
-    - Vector1_E6F0B45F: 5
+    - Vector1_B5685755: 268.4
+    - Vector1_C7DF515: 0.89
+    - Vector1_DD0407D5: 0
+    - Vector1_E6F0B45F: 25
+    - Vector1_E89E88CC: 0.69
     - Vector1_EEDBEBB5: 0
     - _AlphaClip: 0
     - _Blend: 0
@@ -109,9 +92,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_8E9FB516: {r: 1, g: 0, b: 0, a: 0}
-    - Vector2_3CED340F: {r: 1, g: 1, b: 0, a: 0}
-    - Vector2_8C6EADB1: {r: 0, g: 0, b: 0, a: 0}
+    - Color_8E9FB516: {r: 0.7169812, g: 0.15843667, b: 0.091313645, a: 0}
     - _BaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
