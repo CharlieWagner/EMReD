@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WSVRockProperTile
+  m_Name: RockLayersProbuilder
   m_Shader: {fileID: -6465566751694194690, guid: be87e9950f50a6248bfb3e5e4d0a5756,
     type: 3}
   m_ShaderKeywords: 
@@ -71,7 +71,7 @@ Material:
     m_Floats:
     - Vector1_15D77470: 20
     - Vector1_3A449849: 0.1
-    - Vector1_42B3DB6A: 291.65
+    - Vector1_42B3DB6A: 7.45
     - Vector1_7F5EBA8F: 0.05
     - Vector1_8C8071A8: 0
     - Vector1_D14AE8AC: 0.56
@@ -98,10 +98,10 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_4EEAB53D: {r: 0.9716981, g: 0.9383527, b: 0.91211283, a: 1}
-    - Color_92E165CF: {r: 0.8207547, g: 0.6327112, b: 0.56910825, a: 1}
+    - Color_4EEAB53D: {r: 0.9339623, g: 0.9339623, b: 0.9339623, a: 1}
+    - Color_92E165CF: {r: 0.7830189, g: 0.43297073, b: 0.21052866, a: 1}
     - Vector2_19538EBC: {r: 0, g: 0, b: 0, a: 0}
-    - Vector2_AE35A44F: {r: 1, g: 1, b: 0, a: 0}
+    - Vector2_AE35A44F: {r: 0.05, g: 0.05, b: 0, a: 0}
     - _BaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MossyRockTest 1
+  m_Name: MossyRock
   m_Shader: {fileID: -6465566751694194690, guid: a24a59b4fe71a9741bd9ea18e5167530,
     type: 3}
   m_ShaderKeywords: _ENVIRONMENTREFLECTIONS_OFF
@@ -97,8 +97,8 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_70C1BA0F: {r: 0.8396226, g: 0.107185856, b: 0, a: 1}
-    - Color_9903511: {r: 0.3554201, g: 0.4254818, b: 0.46226418, a: 0}
+    - Color_70C1BA0F: {r: 0.45323068, g: 0.9150943, b: 0.71806043, a: 1}
+    - Color_9903511: {r: 1, g: 1, b: 1, a: 0}
     - _BaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
