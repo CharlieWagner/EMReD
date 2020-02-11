@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4709935660131053959
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
 --- !u!21 &2100000
 Material:
   serializedVersion: 6
@@ -7,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Foliage03Mat
-  m_Shader: {fileID: -6465566751694194690, guid: 53a72f2e5509ad348929664524bb23f3,
+  m_Name: PalmTree
+  m_Shader: {fileID: -6465566751694194690, guid: 8aa2ebdf82c266641b472a7e3a7cdc67,
     type: 3}
   m_ShaderKeywords: _ALPHATEST_ON _METALLICSPECGLOSSMAP _NORMALMAP
   m_LightmapFlags: 4
@@ -21,27 +34,27 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_20B90CC1:
-        m_Texture: {fileID: 2800000, guid: 3438b5a930cbf4646b5f60a111d7b94e, type: 3}
+        m_Texture: {fileID: 2800000, guid: f5b92d6cfe54dbd49ae30cd51a4905e7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_5ED0049D:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 4ab6f5114b5c920479da2fee3ac7e466, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_9343D763:
-        m_Texture: {fileID: 2800000, guid: f83d8e48e2a14f947b89f1954a9e1afd, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5d43f8b440c9e2e40b2e66698497260b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_A0697F3B:
-        m_Texture: {fileID: 2800000, guid: ad523fd19a4a73044a842d331d5b289f, type: 3}
+        m_Texture: {fileID: 2800000, guid: d1a001ef07dc5424a87f5dda6ce68ea3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: 3438b5a930cbf4646b5f60a111d7b94e, type: 3}
+        m_Texture: {fileID: 2800000, guid: f5b92d6cfe54dbd49ae30cd51a4905e7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: ad523fd19a4a73044a842d331d5b289f, type: 3}
+        m_Texture: {fileID: 2800000, guid: d1a001ef07dc5424a87f5dda6ce68ea3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
@@ -49,11 +62,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 3438b5a930cbf4646b5f60a111d7b94e, type: 3}
+        m_Texture: {fileID: 2800000, guid: f5b92d6cfe54dbd49ae30cd51a4905e7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: f83d8e48e2a14f947b89f1954a9e1afd, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5d43f8b440c9e2e40b2e66698497260b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -65,11 +78,12 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_2ECF11B9: 0.2
-    - Vector1_6054220D: 0
-    - Vector1_6741711: 0.5
-    - Vector1_E6F0B45F: 5
-    - Vector1_EEDBEBB5: 0.073
+    - Vector1_2ECF11B9: 0.01
+    - Vector1_4D582654: 0.5
+    - Vector1_541887E9: -0.5
+    - Vector1_6741711: 1
+    - Vector1_E6F0B45F: 25
+    - Vector1_EEDBEBB5: 0
     - _AlphaClip: 1
     - _Blend: 0
     - _BumpScale: 1
@@ -84,7 +98,7 @@ Material:
     - _OcclusionStrength: 1
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Smoothness: 0.023
+    - _Smoothness: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -92,24 +106,13 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_4603D2B5: {r: 0, g: 0, b: 0, a: 0}
-    - Color_8E9FB516: {r: 0.20069422, g: 0.7735849, b: 0.5949637, a: 0}
+    - Color_4603D2B5: {r: 0.43467426, g: 0.8301887, b: 0.709971, a: 1}
+    - Color_70C1BA0F: {r: 0.10215367, g: 1, b: 0, a: 0}
+    - Color_8E9FB516: {r: 0.6415094, g: 0.52652186, b: 0.46902812, a: 0}
+    - Color_9903511: {r: 0.5283019, g: 0.5283019, b: 0.5283019, a: 0}
     - Vector2_3CED340F: {r: 1, g: 1, b: 0, a: 0}
     - Vector2_8C6EADB1: {r: 0, g: 0, b: 0, a: 0}
-    - _BaseColor: {r: 1, g: 0.6415999, b: 0, a: 1}
+    - _BaseColor: {r: 1, g: 0.4009434, b: 0.5703736, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
---- !u!114 &5244180858611661463
-MonoBehaviour:
-  m_ObjectHideFlags: 11
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 1
