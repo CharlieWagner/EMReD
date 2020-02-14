@@ -9,11 +9,14 @@ public class Boulders : MonoBehaviour
     public GameObject _GroundCollider;
     private bool _HasFallen;
 
+    public AudioSource Source;
+
     private void Start()
     {
         _SetBouldersKinematic(true);
 
         _GroundCollider.SetActive(true);
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -25,6 +28,10 @@ public class Boulders : MonoBehaviour
             _SetBouldersKinematic(false);
             _GroundCollider.SetActive(false);
             Debug.Log("boom");
+            if (TryGetComponent<AudioSource>(out Source))
+            {
+                Source.Play();
+            }
         }
     }
 
