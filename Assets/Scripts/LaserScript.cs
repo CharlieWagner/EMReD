@@ -1,24 +1,85 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LaserScript : MonoBehaviour
 {
     Camera[] _camera;
-    LineRenderer _laserLine;
+    public LineRenderer _laserLine;
     public GameObject _LaserHitFX;
+
+    public GameObject _LaserUI;
+    public Text _LaserDisplayText;
+
+    public float _LaserCharge = 0;
+    public float _LaserChargeCap = 3;
+
     // Start is called before the first frame update
     public void Awake()
     {
         _camera = GetComponentsInChildren<Camera>();
-        _laserLine = _camera[1].GetComponent<LineRenderer>();
     }
     public void Tool_Laser()
     {
-        if (Input.GetButton("Fire1"))
+        //string Warning = "";
+
+        _LaserUI.SetActive(true); // Enable laser UI
+        
+
+        if (Input.GetButton("Fire1")) // Charge Laser
         {
 
-            _laserLine.enabled = true;
+            
+            _LaserCharge += Time.deltaTime;
+            _LaserCharge = Mathf.Clamp(_LaserCharge, 0, _LaserChargeCap);
+        }
+
+
+
+        if (Input.GetButtonUp("Fire1")) // Try shoot laser
+        {
+
+
+            if (_LaserCharge >= _LaserChargeCap) // if charged enough
+            {
+                Debug.Log("Shoot");
+
+                RaycastHit hit;
+                if (Physics.Raycast(_camera[1].transform.position, _camera[1].transform.forward, out hit, 50f))
+                {
+                    Debug.Log("raycast");
+                    Instantiate(_LaserHitFX, hit.point, Quaternion.Euler(hit.normal));
+
+                    if (hit.transform.tag == "LaserTarget") // if Hit
+                    {
+
+                        Debug.Log("is laserTarget");
+                        // Do the thing
+                        LaserBehaviour TargetBehaviour;
+
+                        TargetBehaviour = hit.transform.GetComponent<LaserBehaviour>();
+
+                        TargetBehaviour.GetShot();
+                        
+                    }
+                }
+
+
+            }
+            else // if not charged enough
+            {
+            }
+
+            _LaserCharge = 0;
+        }
+
+        _LaserDisplayText.text = "test wallah" + "\n" + "niveau de charge : " + _LaserCharge + "/" + _LaserChargeCap; // UI Display Update
+
+        /*if (Input.GetButton("Fire1"))
+        {
+
+            
 
             RaycastHit hit;
             //Debug.DrawRay(_camera[1].transform.position, _camera[1].transform.forward * 10f, Color.red);
@@ -29,11 +90,23 @@ public class LaserScript : MonoBehaviour
                     //Debug.Log("Yolo swag hit the sack");
                 }
                 if (Time.frameCount % 3 == 0)
-                    Instantiate(_LaserHitFX, hit.point + (hit.normal*.05f), Quaternion.identity);
+                    
             }
 
         } else {
             _laserLine.enabled = false;
-        }
+        }*/
+    }
+
+    public void ShootLaser()
+    {
+        _laserLine.enabled = true;
+    }
+
+
+
+    public void Tool_DisableUI()
+    {
+        _LaserUI.SetActive(false); // Disable Laser UI
     }
 }

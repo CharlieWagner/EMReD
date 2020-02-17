@@ -12,8 +12,8 @@ public class RoverController : MonoBehaviour
     public GameObject _Camera;//Geez I wonder what that is
     public Camera _CameraCamera;
 
-    public CameraScript[] _CameraPosScript;
-    
+    public CameraScript[] _CameraPosScript; // 0 Nothing // 1 Thruster // 2 Laser // 3 Scanner // 4 Menu
+
     /*public float _Vrange = 90.0f;//LIMITE vericale de la caméra
     public float _Hrange = 90.0f;*/
     [Header("Contrôles déplacement")]
@@ -25,7 +25,6 @@ public class RoverController : MonoBehaviour
     public float _maxFloorAngle;
 
     public float _WheelRotateSpeed;
-    public Transform[] _Wheels;
     [Header("Rover Stuff")]
 
     public GameObject _MinimapCamera;
@@ -122,11 +121,17 @@ public class RoverController : MonoBehaviour
         if (_CurrentTool == 0) // LAMP
         {
             _Tool_Lamp();
-        } else if (_CurrentTool == 1) { // THRUSTERS
-            //_Tool_Thruster();
         }
 
-        
+        if (_CurrentTool == 2)
+        {
+            _Laser.Tool_Laser();
+        } else
+        {
+            _Laser.Tool_DisableUI();
+        }
+
+
 
     }
 
@@ -141,7 +146,7 @@ public class RoverController : MonoBehaviour
             _Thruster.EmptyGauge();
         }
         if (_CurrentTool == 2)
-            _Laser.Tool_Laser();
+            
         if (_CurrentTool == 3)
             _Scanner.Tool_Scanner();
         else
