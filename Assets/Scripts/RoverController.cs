@@ -29,6 +29,7 @@ public class RoverController : MonoBehaviour
     [Header("Rover Stuff")]
 
     public GameObject _MinimapCamera;
+    public GameObject Lamp;
 
     public Text _HudText;
     [Range(0, 4)]
@@ -47,6 +48,7 @@ public class RoverController : MonoBehaviour
 
     public ThrusterScript _Thruster;
     public LaserScript _Laser;
+    public ScannerScript _Scanner;
 
 
     void Start()
@@ -140,6 +142,10 @@ public class RoverController : MonoBehaviour
         }
         if (_CurrentTool == 2)
             _Laser.Tool_Laser();
+        if (_CurrentTool == 3)
+            _Scanner.Tool_Scanner();
+        else
+            _Scanner.Tool_Scanner_Disable();
 
         if (isGrounded())
         {
@@ -208,7 +214,6 @@ public class RoverController : MonoBehaviour
 
     public void _Tool_Lamp()
     {
-        GameObject Lamp = transform.GetChild(8).gameObject;
         Lamp.SetActive(Input.GetButton("Fire1"));
     }
 
