@@ -74,12 +74,12 @@ public class ThrusterScript : MonoBehaviour
         }
 
         if ((Mathf.Sin(Time.time * 10) > 0) && (_ThrusterFuel <= _MaxThrusterFuel * .5f))
-            WarningText = "FUEL LOW";
+            WarningText = "ENERGY LOW";
 
-        Debug.Log(Time.time);
+        //Debug.Log(Time.time);
 
         _ThrusterGauge.text = WarningText +
-                        "\n" + "\n" + "\n" + "\n" + "\n" + "\n" + "\n" + "Thruster Fuel :" +
+                        "\n" + "\n" + "\n" + "\n" + "\n" + "\n" + "\n" + "Thruster Energy :" +
                         "\n" + "[" + GaugeText + "]";
     }
 
