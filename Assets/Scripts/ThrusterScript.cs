@@ -85,7 +85,8 @@ public class ThrusterScript : MonoBehaviour
 
     public void EmptyGauge()
     {
-        _ThrusterGauge.text = null;
+        if (_ThrusterGauge.text != null)
+            _ThrusterGauge.text = null;
     }
 
     public Vector3 ThrustVelocityTarget(float Speed) // Base X & Z axis velocity target
