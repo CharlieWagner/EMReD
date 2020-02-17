@@ -16,8 +16,14 @@ public class LaserExplode : MonoBehaviour
             _SubRocks[i].isKinematic = false;
 
             _SubRocks[i].AddForce((_SubRocks[i].transform.position - transform.position) * ExplosionForce);
+
+            _SubRocks[i].transform.parent = null;
         }
 
+
+
         Debug.Log("I go boom");
+
+        Destroy(gameObject);
     }
 }
