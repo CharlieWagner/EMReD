@@ -394,11 +394,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1.2
-  m_Text: 'DESIGNATION : OBJ-000
-
-
-    DESCRIPTION : SOMETIMES IT DOES STUFF, SOMETIMES
-    IT DOES NOT. WHO KNOWS AT THIS POINT'
+  m_Text: 
 --- !u!114 &1089635867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -772,7 +768,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8532273021246061550
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1860,8 +1856,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.3
-  m_Center: {x: 0, y: -0.2, z: 0}
+  m_Radius: 0.45
+  m_Center: {x: 0, y: -0.1, z: 0}
 --- !u!54 &6999633243926993076
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -200,7 +200,7 @@ public class RoverController : MonoBehaviour
     {
         bool toReturn;
         RaycastHit Hit;
-        toReturn = Physics.SphereCast(transform.position, .3f, -Vector3.up, out Hit, 0.65f);
+        toReturn = Physics.SphereCast(transform.position, .3f, -Vector3.up, out Hit, 0.6f);
         if (Vector3.Angle(transform.up, Hit.normal) <= _maxFloorAngle)
         {
             _GroundedForwards = Quaternion.AngleAxis(-90, transform.forward) * Hit.normal;
