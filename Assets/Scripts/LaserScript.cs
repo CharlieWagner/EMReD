@@ -15,6 +15,8 @@ public class LaserScript : MonoBehaviour
     public float _LaserCharge = 0;
     public float _LaserChargeCap = 3;
 
+    public int _GaugeLength = 5;
+
     // Start is called before the first frame update
     public void Awake()
     {
@@ -74,7 +76,16 @@ public class LaserScript : MonoBehaviour
             _LaserCharge = 0;
         }
 
-        _LaserDisplayText.text = "test wallah" + "\n" + "niveau de charge : " + _LaserCharge + "/" + _LaserChargeCap; // UI Display Update
+        string GaugeText = ""; // Gauge
+        for (int i = 0; i < _GaugeLength; i++)
+        {
+            if (_LaserCharge > (_LaserChargeCap / _GaugeLength * i))
+                GaugeText += "|";
+            else
+                GaugeText += ".";
+        }
+
+        _LaserDisplayText.text = "niveau de charge : " + "\n" + GaugeText; // UI Display Update
 
         /*if (Input.GetButton("Fire1"))
         {
