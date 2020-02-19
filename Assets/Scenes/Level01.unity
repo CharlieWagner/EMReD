@@ -59821,52 +59821,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -4851313930711003780, guid: 44eaa961c6612ba40975a6e35c869f36,
-        type: 3}
-      propertyPath: m_RenderPostProcessing
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -4851313930711003780, guid: 44eaa961c6612ba40975a6e35c869f36,
-        type: 3}
-      propertyPath: m_Antialiasing
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4851313930711003780, guid: 44eaa961c6612ba40975a6e35c869f36,
-        type: 3}
-      propertyPath: m_AntialiasingQuality
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -4851313930711003780, guid: 44eaa961c6612ba40975a6e35c869f36,
-        type: 3}
-      propertyPath: m_Dithering
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 734966511580811610, guid: 44eaa961c6612ba40975a6e35c869f36,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4295800380050409022, guid: 44eaa961c6612ba40975a6e35c869f36,
-        type: 3}
-      propertyPath: _LaserChargeCap
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4295800380050409022, guid: 44eaa961c6612ba40975a6e35c869f36,
-        type: 3}
-      propertyPath: _GaugeLength
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4295800380050409022, guid: 44eaa961c6612ba40975a6e35c869f36,
-        type: 3}
-      propertyPath: _LaserTip
-      value: 
-      objectReference: {fileID: 1141921584}
-    - target: {fileID: 4295800380050409022, guid: 44eaa961c6612ba40975a6e35c869f36,
-        type: 3}
-      propertyPath: _LaserShootFX
-      value: 
-      objectReference: {fileID: 5458316441441719188, guid: 9041a7939d9db984d90bb7b02c80f580,
-        type: 3}
     - target: {fileID: 5271009166389937325, guid: 44eaa961c6612ba40975a6e35c869f36,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -59946,11 +59900,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -65.94
-      objectReference: {fileID: 0}
-    - target: {fileID: 7210380761148708044, guid: 44eaa961c6612ba40975a6e35c869f36,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7386174802677551872, guid: 44eaa961c6612ba40975a6e35c869f36,
         type: 3}
