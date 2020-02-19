@@ -8,6 +8,9 @@ public class LaserScript : MonoBehaviour
     Camera[] _camera;
     public LineRenderer _laserLine;
     public GameObject _LaserHitFX;
+    public GameObject _LaserShootFX;
+
+    public Transform _LaserTip;
 
     public GameObject _LaserUI;
     public Text _LaserDisplayText;
@@ -51,7 +54,8 @@ public class LaserScript : MonoBehaviour
                 if (Physics.Raycast(_camera[1].transform.position, _camera[1].transform.forward, out hit, 50f))
                 {
                     Debug.Log("raycast");
-                    Instantiate(_LaserHitFX, hit.point, Quaternion.Euler(hit.normal));
+                    Instantiate(_LaserHitFX, hit.point, Quaternion.LookRotation(hit.normal));
+                    Instantiate(_LaserShootFX, _LaserTip.position, Quaternion.LookRotation(_LaserTip.forward));
 
                     if (hit.transform.tag == "LaserTarget") // if Hit
                     {
@@ -85,7 +89,7 @@ public class LaserScript : MonoBehaviour
                 GaugeText += ".";
         }
 
-        _LaserDisplayText.text = "niveau de charge : " + "\n" + GaugeText; // UI Display Update
+        _LaserDisplayText.text = "niveau de charge : " + "\n" + "[" + GaugeText + "]"; // UI Display Update
 
         /*if (Input.GetButton("Fire1"))
         {
