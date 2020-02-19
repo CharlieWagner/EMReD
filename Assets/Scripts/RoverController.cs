@@ -131,6 +131,10 @@ public class RoverController : MonoBehaviour
             _Laser.Tool_DisableUI();
         }
 
+        if (_CurrentTool == 3)
+            _Scanner.Tool_Scanner();
+        else
+            _Scanner.Tool_Scanner_Disable();
 
 
     }
@@ -145,12 +149,7 @@ public class RoverController : MonoBehaviour
         {
             _Thruster.EmptyGauge();
         }
-        if (_CurrentTool == 2)
-            
-        if (_CurrentTool == 3)
-            _Scanner.Tool_Scanner();
-        else
-            _Scanner.Tool_Scanner_Disable();
+        
 
         if (isGrounded())
         {
