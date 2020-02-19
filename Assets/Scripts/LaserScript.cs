@@ -9,6 +9,7 @@ public class LaserScript : MonoBehaviour
     public LineRenderer _laserLine;
     public GameObject _LaserHitFX;
     public GameObject _LaserShootFX;
+    public GameObject _LaserChargeEffect;
 
     public Transform _LaserTip;
 
@@ -30,11 +31,11 @@ public class LaserScript : MonoBehaviour
         //string Warning = "";
 
         _LaserUI.SetActive(true); // Enable laser UI
-        
+        _LaserChargeEffect.SetActive(Input.GetButton("Fire1"));
 
         if (Input.GetButton("Fire1")) // Charge Laser
         {
-
+            
             
             _LaserCharge += Time.deltaTime;
             _LaserCharge = Mathf.Clamp(_LaserCharge, 0, _LaserChargeCap);
