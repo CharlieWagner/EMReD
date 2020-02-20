@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class Boulders : MonoBehaviour
 {
+    [SerializeField]
+    private Rigidbody[] _Boulders;
+    [SerializeField]
+    private GameObject _GroundCollider;
+    [SerializeField]
+    private Transform _RoverRespawnPoint;
 
-    public Rigidbody[] _Boulders;
-    public GameObject _GroundCollider;
     private bool _HasFallen;
 
-    public AudioSource Source;
+    private GameObject _Player;
+
+    [SerializeField]
+    private AudioSource Source;
 
     private void Start()
     {
+        _Player = GameObject.FindWithTag("Player");
+
         _SetBouldersKinematic(true);
 
         _GroundCollider.SetActive(true);
@@ -27,6 +36,9 @@ public class Boulders : MonoBehaviour
         {
             _SetBouldersKinematic(false);
             _GroundCollider.SetActive(false);
+            
+            SetPlayerRespawnPoint();
+
             Debug.Log("boom");
             if (TryGetComponent<AudioSource>(out Source))
             {
@@ -42,5 +54,11 @@ public class Boulders : MonoBehaviour
         {
             _Boulders[i].isKinematic = status;
         }
+    }
+    
+
+    private void SetPlayerRespawnPoint()
+    {
+        _Player.GetComponent<RoverController>()._PlayerRespawnPoint = _RoverRespawnPoint;
     }
 }

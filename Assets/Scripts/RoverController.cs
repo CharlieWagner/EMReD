@@ -23,8 +23,8 @@ public class RoverController : MonoBehaviour
     public float _AirControl;
     private Vector3 _GroundedForwards;
     public float _maxFloorAngle;
+    
 
-    public float _WheelRotateSpeed;
     [Header("Rover Stuff")]
 
     public GameObject _MinimapCamera;
@@ -36,6 +36,7 @@ public class RoverController : MonoBehaviour
     public string[] _ToolText;
     public string[] _ToolTip;
 
+    public Transform _PlayerRespawnPoint;
 
     [Header("Sound")]
     public AudioClip[] _Sound; // 0 Cam Switch, 1 Cam Motor, 2 Rover Motor, 3 Control Mode Switch
@@ -212,7 +213,16 @@ public class RoverController : MonoBehaviour
         } else
         {
             _GroundedForwards = transform.forward;
-        }        
+        }
+
+        /*if (!_RotationLocked)
+        {
+            transform.position = _PlayerRespawnPoint.position;
+            transform.rotation = _PlayerRespawnPoint.rotation;
+
+            _RotationLocked = true;
+        }*/
+
         return toReturn;
     }
 
@@ -220,5 +230,4 @@ public class RoverController : MonoBehaviour
     {
         Lamp.SetActive(Input.GetButton("Fire1"));
     }
-
 }
