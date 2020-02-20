@@ -36,6 +36,11 @@ public class RoverController : MonoBehaviour
     public string[] _ToolText;
     public string[] _ToolTip;
 
+
+    public bool _Offline;
+    [SerializeField]
+    private GameObject _RebootScreen;
+
     public Transform _PlayerRespawnPoint;
 
     [Header("Sound")]
@@ -91,85 +96,102 @@ public class RoverController : MonoBehaviour
         }
         */
 
-        if (Input.GetKey(KeyCode.Alpha1))
-            _CurrentTool = 0;
-
-        if (Input.GetKey(KeyCode.Alpha2))
-            _CurrentTool = 1;
-
-        if (Input.GetKey(KeyCode.Alpha3))
-            _CurrentTool = 2;
-
-        if (Input.GetKey(KeyCode.Alpha4))
-            _CurrentTool = 3;
-
-        if (Input.GetKey(KeyCode.Alpha5))
-            _CurrentTool = 4;
-
-        _Camera.transform.position = _CameraPosScript[_CurrentTool]._FinalTransform.position;
-        _Camera.transform.rotation = _CameraPosScript[_CurrentTool]._FinalTransform.transform.rotation;
-        _CameraCamera.fieldOfView  = _CameraPosScript[_CurrentTool].fov;
-
-        // ACTIVE CAMERA QUAND NECESSAIRE
-        if (_CurrentTool == 1 || _CurrentTool == 2 || _CurrentTool == 3)
-            _CameraPosScript[_CurrentTool].RotateCam(Input.GetAxis("Horizontal") * Time.deltaTime * _RotSpeed, Input.GetAxis("Vertical") * Time.deltaTime * _RotSpeed);
-
-
-        _HudText.text = "CURRENT TOOL : " + _ToolText[_CurrentTool] +
-                "\n" + _ToolTip[_CurrentTool];
-
-
-        if (_CurrentTool == 0) // LAMP
+        if (!_Offline) // ------------------------------------------------------------------------ IF ROVER NOT OFFLINE
         {
-            _Tool_Lamp();
+            if (Input.GetKey(KeyCode.Alpha1))
+                _CurrentTool = 0;
+
+            if (Input.GetKey(KeyCode.Alpha2))
+                _CurrentTool = 1;
+
+            if (Input.GetKey(KeyCode.Alpha3))
+                _CurrentTool = 2;
+
+            if (Input.GetKey(KeyCode.Alpha4))
+                _CurrentTool = 3;
+
+            if (Input.GetKey(KeyCode.Alpha5))
+                _CurrentTool = 4;
+
+            _Camera.transform.position = _CameraPosScript[_CurrentTool]._FinalTransform.position;
+            _Camera.transform.rotation = _CameraPosScript[_CurrentTool]._FinalTransform.transform.rotation;
+            _CameraCamera.fieldOfView  = _CameraPosScript[_CurrentTool].fov;
+
+            // ACTIVE CAMERA QUAND NECESSAIRE
+            if (_CurrentTool == 1 || _CurrentTool == 2 || _CurrentTool == 3)
+                _CameraPosScript[_CurrentTool].RotateCam(Input.GetAxis("Horizontal") * Time.deltaTime * _RotSpeed, Input.GetAxis("Vertical") * Time.deltaTime * _RotSpeed);
+
+
+            _HudText.text = "CURRENT TOOL : " + _ToolText[_CurrentTool] +
+                    "\n" + _ToolTip[_CurrentTool];
+
+
+            if (_CurrentTool == 0) // LAMP
+            {
+                _Tool_Lamp();
+            }
+
+            if (_CurrentTool == 2)
+            {
+                _Laser.Tool_Laser();
+            } else
+            {
+                _Laser.Tool_DisableUI();
+            }
+
+            if (_CurrentTool == 3)
+                _Scanner.Tool_Scanner();
+            else
+                _Scanner.Tool_Scanner_Disable();
         }
+        else // ------------------------------------------------------------------------ IF ROVER OFFLINE
+        {
+            if (Input.GetKey(KeyCode.Backspace))
+            {
+                Debug.Log("Rebooting");
 
-        if (_CurrentTool == 2)
-        {
-            _Laser.Tool_Laser();
-        } else
-        {
-            _Laser.Tool_DisableUI();
+                Reboot();
+            }
+
+
+            //_RebootScreen.SetActive(true);
         }
-
-        if (_CurrentTool == 3)
-            _Scanner.Tool_Scanner();
-        else
-            _Scanner.Tool_Scanner_Disable();
-
 
     }
 
     void FixedUpdate()
     {
-
-        if (_CurrentTool == 1) { // THRUSTERS
-            _Thruster.Tool_Thruster();
-        }
-        else
+        if (!_Offline) // ------------------------------------------------------------------------ IF ROVER NOT OFFLINE
         {
-            _Thruster.EmptyGauge();
-        }
-        
-
-        if (isGrounded())
-        {
-            if (_CurrentTool == 0)
-            {
-                AccelerateTowards(BaseVelocityTarget(_GroundSpeed));
-                RotatePlayer();
-                Vector3 test = transform.rotation.eulerAngles;
+            if (_CurrentTool == 1)
+            { // THRUSTERS
+                _Thruster.Tool_Thruster();
             }
-        }
-        else
-        {
-            /*
-            float dotVectors;
-            dotVectors = Vector3.Dot(BaseVelocityTarget(AirControl).normalized, new Vector3(PlayerRB.velocity.x, 0, PlayerRB.velocity.z).normalized);
-            dotVectors = -dotVectors + 1;
-            dotVectors = Mathf.Clamp(dotVectors, 0, 1);
-            Debug.Log(dotVectors);
-            PlayerRB.AddForce(BaseVelocityTarget(AirControl) * dotVectors);*/
+            else
+            {
+                _Thruster.EmptyGauge();
+            }
+
+
+            if (isGrounded())
+            {
+                if (_CurrentTool == 0)
+                {
+                    AccelerateTowards(BaseVelocityTarget(_GroundSpeed));
+                    RotatePlayer();
+                    Vector3 test = transform.rotation.eulerAngles;
+                }
+            }
+            else
+            {
+                /*
+                float dotVectors;
+                dotVectors = Vector3.Dot(BaseVelocityTarget(AirControl).normalized, new Vector3(PlayerRB.velocity.x, 0, PlayerRB.velocity.z).normalized);
+                dotVectors = -dotVectors + 1;
+                dotVectors = Mathf.Clamp(dotVectors, 0, 1);
+                Debug.Log(dotVectors);
+                PlayerRB.AddForce(BaseVelocityTarget(AirControl) * dotVectors);*/
+            }
         }
     }
 
@@ -215,19 +237,27 @@ public class RoverController : MonoBehaviour
             _GroundedForwards = transform.forward;
         }
 
-        /*if (!_RotationLocked)
-        {
-            transform.position = _PlayerRespawnPoint.position;
-            transform.rotation = _PlayerRespawnPoint.rotation;
-
-            _RotationLocked = true;
-        }*/
-
         return toReturn;
     }
 
     public void _Tool_Lamp()
     {
         Lamp.SetActive(Input.GetButton("Fire1"));
+    }
+
+    public void Reboot()
+    {
+        _Offline = false;
+        _RebootScreen.SetActive(false);
+    }
+
+    public void Kill()
+    {
+        Debug.Log("KilledRover");
+
+        _Offline = true;
+        transform.position = _PlayerRespawnPoint.position;
+        transform.rotation = _PlayerRespawnPoint.rotation;
+        _RebootScreen.SetActive(true);
     }
 }

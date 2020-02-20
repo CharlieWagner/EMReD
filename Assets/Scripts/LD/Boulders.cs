@@ -37,7 +37,7 @@ public class Boulders : MonoBehaviour
             _SetBouldersKinematic(false);
             _GroundCollider.SetActive(false);
             
-            SetPlayerRespawnPoint();
+            //SetPlayerRespawnPoint();
 
             Debug.Log("boom");
             if (TryGetComponent<AudioSource>(out Source))
@@ -57,8 +57,8 @@ public class Boulders : MonoBehaviour
     }
     
 
-    private void SetPlayerRespawnPoint()
+    /*private void SetPlayerRespawnPoint()
     {
         _Player.GetComponent<RoverController>()._PlayerRespawnPoint = _RoverRespawnPoint;
-    }
+    }*/
 }
