@@ -4,20 +4,17 @@ using UnityEngine;
 
 public class KillZone : MonoBehaviour
 {
-
-    /*private void OnTriggerEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            collision.gameObject.GetComponent<RoverController>().Kill();
-        }
-    }*/
+    [SerializeField]
+    private bool _fireOnce;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
             other.gameObject.GetComponent<RoverController>().Kill();
+
+            if (_fireOnce)
+                Destroy(gameObject);
         }
     }
 }
