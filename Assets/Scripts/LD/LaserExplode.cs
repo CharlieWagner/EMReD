@@ -11,6 +11,7 @@ public class LaserExplode : MonoBehaviour
     [SerializeField]
     private GameObject _ExplodeFX;
     private int _SubRocksCount;
+    
 
     private void Start()
     {
@@ -20,6 +21,7 @@ public class LaserExplode : MonoBehaviour
         {
             _SubRocks[i] = transform.GetChild(i).GetComponent<Rigidbody>();
         }
+        
     }
 
     public void Explode()
@@ -36,9 +38,6 @@ public class LaserExplode : MonoBehaviour
         }
 
         Instantiate(_ExplodeFX, transform.position, Quaternion.identity);
-
-
-        Debug.Log("I go boom");
 
         Destroy(gameObject);
     }

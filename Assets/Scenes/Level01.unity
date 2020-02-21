@@ -31562,8 +31562,8 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Voix Off : Contr\xF4le \n\n\u201CBon, j\u2019esp\xE8re que vous avez compris
-    comment \xE7a fonctionne.\u201D \r\n\n\u201CRover L30-B, par\xE9 au lancement.\u201D\r\n\n
-    \u201CTout le personnel organique est pri\xE9 d\u2019\xE9vacuer la zone de lancement.\u201D
+    comment \xE7a fonctionne.\u201D \r\n\n\u201CRover L30-B, par\xE9 au lancement.\u201D\r\n\n\u201CTout
+    le personnel organique est pri\xE9 d\u2019\xE9vacuer la zone de lancement.\u201D
     \r\n\n\u201CTous les syst\xE8mes sont au vert.\u201D \r\n\n\u201CD\xE9but de
     la proc\xE9dure d\u2019activation.\u201D \r\n\n\u201CCoordonn\xE9es Zeta-Epsilon
     45 confirm\xE9es\u201D\r\n\n\u201CActivation Portail dans 5...4...3...2...1\u2026\u201D\r\n\n\u201CPortail
@@ -69065,7 +69065,7 @@ PrefabInstance:
     - target: {fileID: 2592609743900997060, guid: 05f16afb268105343bb4c97167874291,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 25.53
+      value: 32.36
       objectReference: {fileID: 0}
     - target: {fileID: 2592609743900997060, guid: 05f16afb268105343bb4c97167874291,
         type: 3}
@@ -69075,7 +69075,7 @@ PrefabInstance:
     - target: {fileID: 2592609743900997060, guid: 05f16afb268105343bb4c97167874291,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -15.46
+      value: -16.38
       objectReference: {fileID: 0}
     - target: {fileID: 2592609743900997060, guid: 05f16afb268105343bb4c97167874291,
         type: 3}
@@ -69116,6 +69116,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2592609743900997060, guid: 05f16afb268105343bb4c97167874291,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 23.84958
       objectReference: {fileID: 0}
     - target: {fileID: 2592609743900997067, guid: 05f16afb268105343bb4c97167874291,
         type: 3}
