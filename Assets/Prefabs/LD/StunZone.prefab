@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2592609743900997062}
   - component: {fileID: 2592609743900997065}
   - component: {fileID: 2592609743900997064}
-  m_Layer: 13
+  m_Layer: 14
   m_Name: StunZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}

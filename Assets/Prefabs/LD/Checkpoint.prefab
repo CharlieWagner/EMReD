@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4031842070082255187}
   - component: {fileID: 4031842070082255196}
   - component: {fileID: 4031842070082255197}
-  m_Layer: 13
+  m_Layer: 14
   m_Name: Checkpoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,7 +118,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4031842070853812024}
   - component: {fileID: 5362923893857781242}
-  m_Layer: 13
+  m_Layer: 14
   m_Name: CheckPointSpawnPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}

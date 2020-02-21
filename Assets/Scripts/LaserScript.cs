@@ -16,15 +16,28 @@ public class LaserScript : MonoBehaviour
     public GameObject _LaserUI;
     public Text _LaserDisplayText;
 
-    public float _LaserCharge = 0;
-    public float _LaserChargeCap = 3;
+    [SerializeField]
+    private float _LaserCharge = 0;
+    [SerializeField]
+    private float _LaserChargeCap = 3;
 
-    public int _GaugeLength = 5;
+    [SerializeField]
+    private int _GaugeLength = 5;
+
+    [SerializeField]
+    private AudioClip[] _LaserSounds; // 0 charge / 1 charged / 2 shoot
+    private AudioSource _Audio;
+
+
+    [SerializeField]
+    private LayerMask _laserMask;
+
 
     // Start is called before the first frame update
     public void Awake()
     {
         _camera = GetComponentsInChildren<Camera>();
+        _Audio = _LaserTip.gameObject.GetComponent<AudioSource>();
     }
     public void Tool_Laser()
     {
@@ -33,30 +46,51 @@ public class LaserScript : MonoBehaviour
         _LaserUI.SetActive(true); // Enable laser UI
         _LaserChargeEffect.SetActive(Input.GetButton("Fire1"));
 
+        if (Input.GetButtonDown("Fire1"))
+        {
+            _Audio.Play();
+            _Audio.loop = true;
+        }
+
         if (Input.GetButton("Fire1")) // Charge Laser
         {
             
             
             _LaserCharge += Time.deltaTime;
-            _LaserCharge = Mathf.Clamp(_LaserCharge, 0, _LaserChargeCap);
+            //_LaserCharge = Mathf.Clamp(_LaserCharge, 0, _LaserChargeCap);
+
+            if (_LaserCharge < 1.95)
+            {
+                _Audio.clip = _LaserSounds[0];
+            } else
+            {
+                _Audio.clip = _LaserSounds[1];
+            }
+
+            if (!_Audio.isPlaying)
+                _Audio.Play();
         }
 
 
 
         if (Input.GetButtonUp("Fire1")) // Try shoot laser
         {
-
+            _Audio.loop = false;
 
             if (_LaserCharge >= _LaserChargeCap) // if charged enough
             {
                 Debug.Log("Shoot");
 
+                Instantiate(_LaserShootFX, _LaserTip.position, Quaternion.LookRotation(_LaserTip.forward));
+                _Audio.clip = _LaserSounds[2];
+                if (!_Audio.isPlaying)
+                    _Audio.Play();
+
                 RaycastHit hit;
-                if (Physics.Raycast(_camera[1].transform.position, _camera[1].transform.forward, out hit, 50f))
+                if (Physics.Raycast(_camera[1].transform.position, _camera[1].transform.forward, out hit, 150f, _laserMask))
                 {
                     Debug.Log("raycast");
                     Instantiate(_LaserHitFX, hit.point, Quaternion.LookRotation(hit.normal));
-                    Instantiate(_LaserShootFX, _LaserTip.position, Quaternion.LookRotation(_LaserTip.forward));
 
                     if (hit.transform.tag == "LaserTarget") // if Hit
                     {
@@ -72,10 +106,10 @@ public class LaserScript : MonoBehaviour
                     }
                 }
 
-
             }
             else // if not charged enough
             {
+                _Audio.Stop();
             }
 
             _LaserCharge = 0;
