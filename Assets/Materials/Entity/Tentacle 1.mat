@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TRUCMAT 1
+  m_Name: Tentacle 1
   m_Shader: {fileID: -6465566751694194690, guid: 9fa00cdb3b41e5f47b6fed9b209e927d,
     type: 3}
   m_ShaderKeywords: 
@@ -50,16 +50,17 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Vector1_1745379F: 1
-    - Vector1_41860F56: 20
-    - Vector1_5EE2F6C9: 0.0005
-    - Vector1_C2AF5361: 7.72
-    - Vector1_D5469539: 0.82
-    - Vector1_F0243B41: -0.5
+    - Vector1_41860F56: 18.84
+    - Vector1_5EE2F6C9: -0.15
+    - Vector1_C2AF5361: 1
+    - Vector1_D5469539: 0.73
+    - Vector1_F0243B41: 0.71
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
     - _Cull: 2
     - _Cutoff: 0.5
+    - _DisplaceStr: -1.6
     - _DstBlend: 0
     - _EnvironmentReflections: 1
     - _GlossMapScale: 0
@@ -77,8 +78,8 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_664C62B6: {r: 1, g: 0, b: 0, a: 0}
-    - Color_B3229883: {r: 1, g: 0.5694697, b: 0, a: 0}
+    - Color_664C62B6: {r: 3.9999995, g: 0, b: 0.041884813, a: 0}
+    - Color_B3229883: {r: 3.9999995, g: 0.18800981, b: 0, a: 1}
     - _BaseColor: {r: 0, g: 0, b: 0, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
