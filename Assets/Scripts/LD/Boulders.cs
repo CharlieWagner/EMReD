@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class Boulders : MonoBehaviour
 {
-    [SerializeField]
-    private Rigidbody[] _Boulders;
+    private Rigidbody[] _Boulders = new Rigidbody[25];
     [SerializeField]
     private GameObject _GroundCollider;
-    [SerializeField]
-    private Transform _RoverRespawnPoint;
 
     private bool _HasFallen;
-
+    private int _BoulderCount;
+    [SerializeField]
+    private Transform _BoulderContainer;
     private GameObject _Player;
 
     [SerializeField]
@@ -21,6 +20,14 @@ public class Boulders : MonoBehaviour
     private void Start()
     {
         _Player = GameObject.FindWithTag("Player");
+        
+        _BoulderCount = _BoulderContainer.childCount - 1;
+
+        for (int i = 0; i <= _BoulderCount; i++)
+        {
+            _Boulders[i] = _BoulderContainer.GetChild(i).GetComponent<Rigidbody>();
+        }
+
 
         _SetBouldersKinematic(true);
 
@@ -37,8 +44,6 @@ public class Boulders : MonoBehaviour
             _SetBouldersKinematic(false);
             _GroundCollider.SetActive(false);
             
-            //SetPlayerRespawnPoint();
-
             Debug.Log("boom");
             if (TryGetComponent<AudioSource>(out Source))
             {
@@ -50,9 +55,10 @@ public class Boulders : MonoBehaviour
 
     private void _SetBouldersKinematic(bool status = false)
     {
-        for (int i = 0; i <= _Boulders.Length - 1; i++)
+        for (int i = 0; i <= _BoulderCount; i++)
         {
             _Boulders[i].isKinematic = status;
+            _Boulders[i].AddForce(new Vector3(0,-10,0));
         }
     }
     
