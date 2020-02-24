@@ -28,7 +28,7 @@ public class GateCameraScript : MonoBehaviour
             PortalCam.transform.position = OtherSidePortal.transform.position + Offset;
             PortalCam.transform.rotation = PlayerCam.transform.rotation;
             PortalCam.fieldOfView = PlayerCam.fieldOfView;
-            PortalCam.nearClipPlane = Mathf.Clamp(Vector3.Distance(PortalCam.transform.position, OtherSidePortal.transform.position) - 3, .01f, 10000);
+            PortalCam.nearClipPlane = Mathf.Clamp(Vector3.Distance(PortalCam.transform.position, OtherSidePortal.transform.position) - 10, .01f, 10000);
 
             PlayerOffset = Player.position - PlayerSidePortal.transform.position;
         } else

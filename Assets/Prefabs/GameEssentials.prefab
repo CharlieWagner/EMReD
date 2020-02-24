@@ -2595,8 +2595,6 @@ MonoBehaviour:
   _ThrusterDepleteRate: 2
   _ThrusterRechargeRate: 5
   _HoverSpeed: 5
-  _ThrusterSoundSource: {fileID: 0}
-  _ThrusterSound: {fileID: 8300000, guid: 88b4f799e550a0c49a75ea77de59afa7, type: 3}
   _GaugeLength: 15
   _ThrusterGauge: {fileID: 6449281734196364444}
 --- !u!114 &4295800380050409022
@@ -2662,6 +2660,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _StaticAmount: 0
+  _TrueStaticAmount: 0
   _StaticImage: {fileID: 5761839145041122357}
   _StaticSource: {fileID: 894716761784416645}
 --- !u!1 &6999633244155615025
@@ -4965,7 +4964,7 @@ PrefabInstance:
     - target: {fileID: 5710706872910745029, guid: 8088e2d3ef6eca64ba061489ccfa18bf,
         type: 3}
       propertyPath: fov
-      value: 60
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 5710706872910745029, guid: 8088e2d3ef6eca64ba061489ccfa18bf,
         type: 3}
@@ -4985,12 +4984,12 @@ PrefabInstance:
     - target: {fileID: 5710706872910745029, guid: 8088e2d3ef6eca64ba061489ccfa18bf,
         type: 3}
       propertyPath: RangeX
-      value: 135
+      value: 1e+16
       objectReference: {fileID: 0}
     - target: {fileID: 5710706872910745029, guid: 8088e2d3ef6eca64ba061489ccfa18bf,
         type: 3}
       propertyPath: RangeY
-      value: 45
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 5710706872910745031, guid: 8088e2d3ef6eca64ba061489ccfa18bf,
         type: 3}
@@ -5775,12 +5774,12 @@ PrefabInstance:
     - target: {fileID: 5710706872910745029, guid: 8088e2d3ef6eca64ba061489ccfa18bf,
         type: 3}
       propertyPath: RangeX
-      value: 135
+      value: 1e+18
       objectReference: {fileID: 0}
     - target: {fileID: 5710706872910745029, guid: 8088e2d3ef6eca64ba061489ccfa18bf,
         type: 3}
       propertyPath: RangeY
-      value: 45
+      value: 85
       objectReference: {fileID: 0}
     - target: {fileID: 5710706872910745031, guid: 8088e2d3ef6eca64ba061489ccfa18bf,
         type: 3}
