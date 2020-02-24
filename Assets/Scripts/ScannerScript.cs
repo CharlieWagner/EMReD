@@ -5,18 +5,20 @@ using UnityEngine.UI;
 
 public class ScannerScript : MonoBehaviour
 {
+    RaycastHit hit;
     int _layerMask = 1 << 12; // Layer = Scannable
     Shader[] _objectShaders = new Shader[30];
     int _EmitStrenghtID;
     public int _EmitStrenght = 30;
 
     public float scannerRange = 10f;
-    Collider[] _scannedColliders;
+    List<Collider> _scannedColliders =  new List<Collider>();
 
     Camera[] _camera;
 
     public GameObject scannerDisplay;
     public Text scannableInfo;
+    public GameObject infoIndicator;
 
     [Header("Scanner Field")]
     public GameObject ScannerField;
@@ -25,6 +27,7 @@ public class ScannerScript : MonoBehaviour
 
     [HideInInspector]
     public bool scannerActivated = false;
+    bool infoDisplayed = false;
 
 
     ScannableScript _Scannable;
@@ -36,31 +39,40 @@ public class ScannerScript : MonoBehaviour
     }
     public void Tool_Scanner()
     {
+        ScannerField.SetActive(true);
         if (!scannerActivated)
-            _fieldAnimator.Play("FieldExpand");
+            _fieldAnimator.Play("FieldExpand", -1, 0f);
         scannerActivated = true;
         scannerDisplay.SetActive(true);
         //Debug.Log(_layerMask);
         //StartCoroutine(FieldExpansion());
-        _scannedColliders = Physics.OverlapSphere(_camera[1].transform.position, scannerRange, _layerMask);
-        if (_scannedColliders != null)
+        //_scannedColliders = Physics.OverlapSphere(_camera[1].transform.position, scannerRange, _layerMask);
+        if (_scannedColliders.Count > 0)
         {
-            foreach (Collider scanned in _scannedColliders)
-            {
-                Debug.Log(scanned.name);
-                Renderer renderer = scanned.GetComponent<Renderer>();
-                //_objectShaders[1] = renderer.material.shader;
-                _EmitStrenghtID = renderer.material.shader.GetPropertyNameId(renderer.material.shader.FindPropertyIndex("_EmitStrenght"));
-                renderer.material.SetFloat(_EmitStrenghtID, Mathf.Lerp(0, _EmitStrenght, 0.025f));
-                //renderer.enabled = false;
-            }
+            //foreach (Collider scanned in _scannedColliders)
+            //{
+            //    Debug.Log(scanned.name);
+                
+            //    //renderer.enabled = false;
+            //}
             if (Input.GetButton("Fire1"))
             {
-                RaycastHit hit;
-                if (Physics.Raycast(_camera[1].transform.position, _camera[1].transform.forward, out hit, scannerRange, _layerMask))
+                if (Physics.Raycast(_camera[1].transform.position, _camera[1].transform.forward, out hit, Mathf.Infinity, _layerMask))
                 {
                     _Scannable = hit.transform.GetComponent<ScannableScript>();
                     scannableInfo.text = _Scannable.DisplayInfo();
+                    infoIndicator.SetActive(true);
+                    infoDisplayed = true;
+                }
+                
+            }
+            if (infoDisplayed)
+            {
+                if (!Physics.Raycast(_camera[1].transform.position, _camera[1].transform.forward, out hit, scannerRange, _layerMask))
+                {
+                    infoDisplayed = false;
+                    scannableInfo.text = null;
+                    infoIndicator.SetActive(false);
                 }
             }
         }
@@ -82,7 +94,7 @@ public class ScannerScript : MonoBehaviour
     {
         if (scannerActivated)
         {
-            _scannedColliders = Physics.OverlapSphere(transform.position, scannerRange, _layerMask);
+            //_scannedColliders = Physics.OverlapSphere(transform.position, scannerRange, _layerMask);
 
             if (_scannedColliders != null)
             {
@@ -94,16 +106,26 @@ public class ScannerScript : MonoBehaviour
                     _EmitStrenghtID = renderer.material.shader.GetPropertyNameId(renderer.material.shader.FindPropertyIndex("_EmitStrenght"));
                     renderer.material.SetFloat(_EmitStrenghtID, 0);
                 }
-                _scannedColliders = null;
+                _scannedColliders.Clear();
             }
 
             //scannerActivated = false;
             scannableInfo.text = null;
+            infoIndicator.SetActive(false);
             scannerDisplay.SetActive(false);
 
-
+            ScannerField.SetActive(false);
             //ScannerField.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
             scannerActivated = false;
         }
+    }
+
+    public void HighlightScan(Collider scanned)
+    {
+        Renderer renderer = scanned.GetComponent<Renderer>();
+        //_objectShaders[1] = renderer.material.shader;
+        _EmitStrenghtID = renderer.material.shader.GetPropertyNameId(renderer.material.shader.FindPropertyIndex("_EmitStrenght"));
+        renderer.material.SetFloat(_EmitStrenghtID, Mathf.Lerp(0, _EmitStrenght, 0.025f));
+        _scannedColliders.Add(scanned);
     }
 }
