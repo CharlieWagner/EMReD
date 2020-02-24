@@ -65,41 +65,6 @@ public class RoverController : MonoBehaviour
     }
     private void Update()
     {
-        /*
-        if (ControlMode == 1)
-        {
-            
-            
-
-            if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
-            {
-                Source.clip = Sound[1];
-                Source.pitch = 1;
-                Source.Play();
-            }
-        }
-
-        if (Input.GetKeyDown(KeyCode.B)) // SWITCH CONTROL MODE
-        {
-            ControlMode += 1;
-            ControlMode = ControlMode % 2;
-            Source.clip = Sound[3];
-            Source.pitch = 1;
-            Source.Play();
-        }
-
-        if (Input.GetKeyDown(KeyCode.C)) // SWITCH CAMERA
-        {
-            SelectedCam = SelectedCam + 1;
-            SelectedCam = SelectedCam % (CameraPos.Length);
-
-            Source.clip = Sound[0];
-            Source.pitch = 1;
-            Source.Play();
-            CanvasAnim.SetTrigger("CamSwitch");
-        }
-        */
-
         if (!_Offline) // ------------------------------------------------------------------------ IF ROVER NOT OFFLINE
         {
             if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -141,7 +106,7 @@ public class RoverController : MonoBehaviour
             {
                 _CameraPosScript[_CurrentTool].RotateCam(Input.GetAxis("Horizontal") * Time.deltaTime * _RotSpeed, Input.GetAxis("Vertical") * Time.deltaTime * _RotSpeed);
 
-                if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+                if ((Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0) && _CurrentTool != 1)
                 {
                     if (!_Source[1].isPlaying)
                         _Source[1].Play();
@@ -242,6 +207,11 @@ public class RoverController : MonoBehaviour
                     RotatePlayer();
                     Vector3 test = transform.rotation.eulerAngles;
 
+                }
+
+                if (_CurrentTool != 1)
+                {
+                    _Thruster.RestoreThruster();
                 }
             }
             else
