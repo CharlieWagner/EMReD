@@ -44,8 +44,9 @@ public class RoverController : MonoBehaviour
     public Transform _PlayerRespawnPoint;
 
     [Header("Sound")]
-    public AudioClip[] _Sound; // 0 Cam Switch, 1 Cam Motor, 2 Rover Motor, 3 Control Mode Switch
-    public AudioSource _Source;
+    [SerializeField]
+    private AudioSource[] _Source; // 0 Cam Switch, 1 Cam Motor, 2 Rover Motor
+    private float _WheelPitch;
 
     public Rigidbody _PlayerRB;
 
@@ -98,20 +99,35 @@ public class RoverController : MonoBehaviour
 
         if (!_Offline) // ------------------------------------------------------------------------ IF ROVER NOT OFFLINE
         {
-            if (Input.GetKey(KeyCode.Alpha1))
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
                 _CurrentTool = 0;
+                _Source[0].Play();
+            }
 
-            if (Input.GetKey(KeyCode.Alpha2))
+            if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
                 _CurrentTool = 1;
+                _Source[0].Play();
+            }
 
-            if (Input.GetKey(KeyCode.Alpha3))
+            if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
                 _CurrentTool = 2;
+                _Source[0].Play();
+            }
 
-            if (Input.GetKey(KeyCode.Alpha4))
+            if (Input.GetKeyDown(KeyCode.Alpha4))
+            {
                 _CurrentTool = 3;
+                _Source[0].Play();
+            }
 
-            if (Input.GetKey(KeyCode.Alpha5))
+            if (Input.GetKeyDown(KeyCode.Alpha5))
+            {
                 _CurrentTool = 4;
+                _Source[0].Play();
+            }
 
             _Camera.transform.position = _CameraPosScript[_CurrentTool]._FinalTransform.position;
             _Camera.transform.rotation = _CameraPosScript[_CurrentTool]._FinalTransform.transform.rotation;
@@ -119,16 +135,38 @@ public class RoverController : MonoBehaviour
 
             // ACTIVE CAMERA QUAND NECESSAIRE
             if (_CurrentTool == 1 || _CurrentTool == 2 || _CurrentTool == 3)
+            {
                 _CameraPosScript[_CurrentTool].RotateCam(Input.GetAxis("Horizontal") * Time.deltaTime * _RotSpeed, Input.GetAxis("Vertical") * Time.deltaTime * _RotSpeed);
 
+                if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+                {
+                    if (!_Source[1].isPlaying)
+                        _Source[1].Play();
+                } else
+                {
+                    _Source[1].Stop();
+                }
+
+            }
 
             _HudText.text = "CURRENT TOOL : " + _ToolText[_CurrentTool] +
                     "\n" + _ToolTip[_CurrentTool];
 
 
-            if (_CurrentTool == 0) // LAMP
+
+            if (_CurrentTool == 0) // ------------------------------------------------- Son roues /
             {
-                _Tool_Lamp();
+
+                if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+                {
+                    _WheelPitch += Time.deltaTime;
+                }
+
+                if (_WheelPitch != 0)
+                {
+                    if (!_Source[2].isPlaying)
+                        _Source[2].Play();
+                }
             }
 
             if (_CurrentTool == 2)
@@ -146,6 +184,13 @@ public class RoverController : MonoBehaviour
         }
         else // ------------------------------------------------------------------------ IF ROVER OFFLINE
         {
+
+            _Source[0].Stop();
+            _Source[1].Stop();
+            _Source[2].Stop();
+
+
+
             if (Input.GetKey(KeyCode.Backspace))
             {
                 Debug.Log("Rebooting");
@@ -156,6 +201,19 @@ public class RoverController : MonoBehaviour
 
             //_RebootScreen.SetActive(true);
         }
+        // ------------------------------------------------- Pitch son roues /
+
+        _WheelPitch -= Time.deltaTime * .5f;
+        _WheelPitch = Mathf.Clamp(_WheelPitch, 0, 1);
+
+        if (_WheelPitch == 0)
+        {
+            _Source[2].Stop();
+        }
+
+        float _newPitch;
+        _newPitch = (_WheelPitch * .3f) + .2f;
+        _Source[2].pitch = _newPitch;
 
     }
 
@@ -180,17 +238,11 @@ public class RoverController : MonoBehaviour
                     AccelerateTowards(BaseVelocityTarget(_GroundSpeed));
                     RotatePlayer();
                     Vector3 test = transform.rotation.eulerAngles;
+
                 }
             }
             else
             {
-                /*
-                float dotVectors;
-                dotVectors = Vector3.Dot(BaseVelocityTarget(AirControl).normalized, new Vector3(PlayerRB.velocity.x, 0, PlayerRB.velocity.z).normalized);
-                dotVectors = -dotVectors + 1;
-                dotVectors = Mathf.Clamp(dotVectors, 0, 1);
-                Debug.Log(dotVectors);
-                PlayerRB.AddForce(BaseVelocityTarget(AirControl) * dotVectors);*/
             }
         }
     }

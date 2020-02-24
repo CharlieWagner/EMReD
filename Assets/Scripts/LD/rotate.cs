@@ -21,7 +21,5 @@ public class rotate : MonoBehaviour
         {
             transform.Rotate(new Vector3(0, _rotationSpeed * Time.deltaTime, 0));
         }
-
-        
     }
 }

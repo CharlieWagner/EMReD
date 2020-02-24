@@ -31,6 +31,5 @@ public class CoreController : MonoBehaviour
         {
             _RotationHubs[i]._StartRotation = true;
         }
-
     }
 }

@@ -36,12 +36,12 @@ public class ThrusterScript : MonoBehaviour
                 
                 _ThrusterFuel = Mathf.Clamp(_ThrusterFuel, 0, _MaxThrusterFuel);
 
-                if (Time.frameCount % 5 == 0)
+                /*if (Time.frameCount % 5 == 0)
                 {
                     _ThrusterSoundSource.clip = _ThrusterSound;
                     _ThrusterSoundSource.pitch = _ThrusterForceCurve.Evaluate(_ThrusterFuel / _MaxThrusterFuel);// + (XZVelocity.magnitude / 5);
                     _ThrusterSoundSource.Play();
-                }
+                }*/
 
             }
         } else
