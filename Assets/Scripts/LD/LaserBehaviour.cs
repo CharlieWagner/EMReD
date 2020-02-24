@@ -14,6 +14,9 @@ public class LaserBehaviour : MonoBehaviour
         if (_Type == 0)
         {
             GetComponent<LaserExplode>().Explode();
+        } else if (_Type == 1)
+        {
+            GetComponent<LaserSwitch>().Switch();
         }
     }
 }

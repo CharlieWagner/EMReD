@@ -92,14 +92,14 @@ public class LaserScript : MonoBehaviour
                     Debug.Log("raycast");
                     Instantiate(_LaserHitFX, hit.point, Quaternion.LookRotation(hit.normal));
 
-                    if (hit.transform.tag == "LaserTarget") // if Hit
+                    if (hit.collider.transform.tag == "LaserTarget") // if Hit
                     {
 
                         Debug.Log("is laserTarget");
                         // Do the thing
                         LaserBehaviour TargetBehaviour;
 
-                        TargetBehaviour = hit.transform.GetComponent<LaserBehaviour>();
+                        TargetBehaviour = hit.collider.transform.GetComponent<LaserBehaviour>();
 
                         TargetBehaviour.GetShot();
                         
@@ -125,27 +125,7 @@ public class LaserScript : MonoBehaviour
         }
 
         _LaserDisplayText.text = "niveau de charge : " + "\n" + "[" + GaugeText + "]"; // UI Display Update
-
-        /*if (Input.GetButton("Fire1"))
-        {
-
-            
-
-            RaycastHit hit;
-            //Debug.DrawRay(_camera[1].transform.position, _camera[1].transform.forward * 10f, Color.red);
-            if( Physics.Raycast(_camera[1].transform.position, _camera[1].transform.forward, out hit, 10f))
-            {
-                if (hit.transform.tag == "LaserTarget")
-                {
-                    //Debug.Log("Yolo swag hit the sack");
-                }
-                if (Time.frameCount % 3 == 0)
-                    
-            }
-
-        } else {
-            _laserLine.enabled = false;
-        }*/
+        
     }
 
     public void ShootLaser()
