@@ -56,9 +56,12 @@ public class RoverController : MonoBehaviour
     public LaserScript _Laser;
     public ScannerScript _Scanner;
 
+    private StaticController _StaticCont;
 
     void Start()
     {
+        _StaticCont = GetComponent<StaticController>();
+
     }
     private void Update()
     {
@@ -312,4 +315,5 @@ public class RoverController : MonoBehaviour
         transform.rotation = _PlayerRespawnPoint.rotation;
         _RebootScreen.SetActive(true);
     }
+    
 }

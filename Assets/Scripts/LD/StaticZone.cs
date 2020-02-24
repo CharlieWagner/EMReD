@@ -20,6 +20,12 @@ public class StaticZone : MonoBehaviour
     {
         float _Dist = Vector3.Distance(_Player.transform.position, transform.position);
         
-        _PlayerStatic._StaticAmount = (1 - (2*(_Dist / transform.localScale.x))) * _StaticAmount;
+        float _newStatic = (1 - (2 * (_Dist / transform.localScale.x))) * _StaticAmount;
+
+
+        /*if (_PlayerStatic._StaticAmount < _newStatic)
+        {*/
+            _PlayerStatic._StaticAmount = _newStatic;
+        //}
     }
 }

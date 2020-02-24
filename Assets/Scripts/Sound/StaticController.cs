@@ -8,6 +8,8 @@ public class StaticController : MonoBehaviour
     [Range(0f,1f)]
     public float _StaticAmount;
 
+    public float _TrueStaticAmount;
+
     [SerializeField]
     private RawImage _StaticImage;
     private Material _StaticMat;
@@ -23,6 +25,16 @@ public class StaticController : MonoBehaviour
 
     private void Update()
     {
+        if (_TrueStaticAmount < _StaticAmount)
+        {
+            _TrueStaticAmount += Time.deltaTime;
+        } else if (_TrueStaticAmount > _StaticAmount)
+        {
+            _TrueStaticAmount -= Time.deltaTime;
+        }
+        _TrueStaticAmount = Mathf.Clamp(_TrueStaticAmount, 0, 1);
+
+
         _StaticMat.SetFloat("_Strength", _StaticAmount + .2f);
         _StaticSource.volume = _StaticAmount;
     }

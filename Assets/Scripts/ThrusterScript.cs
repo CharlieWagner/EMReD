@@ -16,8 +16,8 @@ public class ThrusterScript : MonoBehaviour
 
     public float _HoverSpeed;
 
-    public AudioSource _ThrusterSoundSource;
-    public AudioClip _ThrusterSound;
+    //public AudioSource _ThrusterSoundSource;
+    //public AudioClip _ThrusterSound;
 
     public int _GaugeLength;
     public Text _ThrusterGauge;
