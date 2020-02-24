@@ -16,8 +16,7 @@ public class Boulders : MonoBehaviour
 
     [SerializeField]
     private GameObject _particlePlayer;
-
-    [SerializeField]
+    
     private AudioSource Source;
 
     private void Start()
@@ -34,7 +33,8 @@ public class Boulders : MonoBehaviour
 
         _SetBouldersKinematic(true);
 
-        _GroundCollider.SetActive(true);
+        if (_GroundCollider != null)
+            _GroundCollider.SetActive(true);
 
     }
 
@@ -45,8 +45,11 @@ public class Boulders : MonoBehaviour
         if (other.tag == "Player")
         {
             _SetBouldersKinematic(false);
-            _GroundCollider.SetActive(false);
-            _particlePlayer.SetActive(true);
+            if (_GroundCollider != null)
+                _GroundCollider.SetActive(false);
+
+            if (_particlePlayer != null)
+                _particlePlayer.SetActive(true);
             Debug.Log("boom");
             if (TryGetComponent<AudioSource>(out Source))
             {
