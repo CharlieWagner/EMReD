@@ -7,6 +7,28 @@ public class LaserSwitch : MonoBehaviour
     [SerializeField]
     private GameObject Target;
 
+    private Renderer _Renderer;
+
+    private bool _switched = false;
+    private float _opening = 1;
+
+    private void Start()
+    {
+        _Renderer = GetComponent<Renderer>();
+
+        _Renderer.material.SetFloat("_Opening", _opening);
+    }
+
+    private void Update()
+    {
+        if (_switched)
+            _opening -= Time.deltaTime * .6f;
+
+        _opening = Mathf.Clamp(_opening, 0, 1);
+
+        _Renderer.material.SetFloat("_Opening", _opening);
+    }
+
     public void Switch()
     {
         CoreController _Ctrl;
@@ -17,5 +39,7 @@ public class LaserSwitch : MonoBehaviour
         {
             Target.GetComponent<Animator>().SetTrigger("_Trigger");
         }
+
+        _switched = true;
     }
 }
