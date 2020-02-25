@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WSVRockMoss
+  m_Name: WSVRockMoss 1
   m_Shader: {fileID: -6465566751694194690, guid: ff373751461ea4746b1cca9c38e99380,
     type: 3}
   m_ShaderKeywords: 
@@ -78,15 +78,15 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Vector1_15D77470: 20
-    - Vector1_3A449849: 0.05
+    - Vector1_3A449849: 0.1
     - Vector1_42B3DB6A: 291.65
     - Vector1_7F5EBA8F: 0.05
-    - Vector1_83689A9B: 0.22
+    - Vector1_83689A9B: 0
     - Vector1_8C8071A8: 0
-    - Vector1_91940FCD: 30.3
-    - Vector1_BECF369: 0.75
-    - Vector1_D14AE8AC: 0.48
-    - Vector1_D1C14C65: 0.36
+    - Vector1_91940FCD: 300
+    - Vector1_BECF369: 0.5
+    - Vector1_D14AE8AC: 0.56
+    - Vector1_D1C14C65: 0.3
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -111,9 +111,9 @@ Material:
     m_Colors:
     - Color_4EEAB53D: {r: 0.9716981, g: 0.9383527, b: 0.91211283, a: 1}
     - Color_92E165CF: {r: 0.8207547, g: 0.6327112, b: 0.56910825, a: 1}
-    - Color_E24625B2: {r: 0.43943575, g: 0.745283, b: 0.6508383, a: 0}
+    - Color_E24625B2: {r: 0, g: 1, b: 0.12316916, a: 0}
     - Vector2_19538EBC: {r: 0, g: 0, b: 0, a: 0}
-    - Vector2_AE35A44F: {r: 0.05, g: 0.05, b: 0, a: 0}
+    - Vector2_AE35A44F: {r: 1, g: 1, b: 0, a: 0}
     - _BaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
