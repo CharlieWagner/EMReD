@@ -90,7 +90,7 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _Strength: 0.16678722
+    - _Strength: 0.19128996
     - _Surface: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
