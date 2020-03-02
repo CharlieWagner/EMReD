@@ -8,10 +8,10 @@ public class SoundGizmo : MonoBehaviour
     private AudioSource _source;
 
     [SerializeField]
-    [Range(0, 100)]
+    [Range(0, 300)]
     private float _MinRange;
     [SerializeField]
-    [Range(0,100)]
+    [Range(0,300)]
     private float _MaxRange;
 
     [SerializeField]

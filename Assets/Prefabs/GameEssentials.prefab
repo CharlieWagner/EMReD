@@ -576,9 +576,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'CURRENT OBJECTIVE :
+  m_Text: 'OBJECTIF :
 
-    Survive, Evade, Resist, Escape.'
+    Finir le jeu mdrlul'
 --- !u!114 &4335629284666280195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4600,7 +4600,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "ATM  : 1.6 BAR\nTEMP : 69\xB0C\n\nSIGNAL STR :\n[||||||.....]"
+  m_Text: "ATM  : 1.6 BAR\nTEMP : 68.9\xB0C\n\nSIGNAL STR :\n[||||||.....]"
 --- !u!114 &6715469155541980813
 MonoBehaviour:
   m_ObjectHideFlags: 0
