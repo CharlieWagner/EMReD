@@ -265,9 +265,9 @@ public class RoverController : MonoBehaviour
         return toReturn;
     }
 
-    public void _Tool_Lamp()
+    public void _Tool_Lamp(bool state)
     {
-        Lamp.SetActive(Input.GetButton("Fire1"));
+        Lamp.SetActive(state);
     }
 
     public void Reboot()
