@@ -108,6 +108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 6612927837289957612}
+  _CubeRenderer: {fileID: 6612927836928129083}
 --- !u!114 &496776639352972854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,7 +182,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6cca1323ef8cd984190f29ade49b473d, type: 2}
+  - {fileID: 2100000, guid: f935d6b4f83b43e45bfc875eb8a90f8f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
