@@ -12,19 +12,38 @@ public class Elevator : MonoBehaviour
     [SerializeField]
     private float _forceStr;
 
+    [SerializeField]
+    private Transform _ElevatorTransform;
+
     private void Start()
     {
         _Player = GameObject.FindWithTag("Player");
         _PlayerRB = _Player.GetComponent<Rigidbody>();
     }
-    
 
-    // Update is called once per frame
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            _Player.transform.SetParent(_ElevatorTransform);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            _Player.transform.SetParent(null);
+        }
+    }
+
+
+    /*
     private void OnTriggerStay(Collider other)
     {
         if (other.tag == "Player")
         {
             _PlayerRB.AddForce(new Vector3(0,-_forceStr,0), ForceMode.Acceleration);
         }
-    }
+    }*/
 }
