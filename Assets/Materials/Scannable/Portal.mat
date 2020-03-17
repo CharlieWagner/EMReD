@@ -61,6 +61,7 @@ Material:
     - _DstBlend: 0
     - _EmitSize: 0.2
     - _EmitSpeed: 2
+    - _EmitStrenght: 0
     - _EnvironmentReflections: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
