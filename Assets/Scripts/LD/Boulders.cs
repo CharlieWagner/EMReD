@@ -8,7 +8,7 @@ public class Boulders : MonoBehaviour
     [SerializeField]
     private GameObject _GroundCollider;
 
-    private bool _HasFallen;
+    private bool _HasFallen = false;
     private int _BoulderCount;
     [SerializeField]
     private Transform _BoulderContainer;
@@ -44,16 +44,21 @@ public class Boulders : MonoBehaviour
         
         if (other.tag == "Player")
         {
-            _SetBouldersKinematic(false);
-            if (_GroundCollider != null)
-                _GroundCollider.SetActive(false);
-
-            if (_particlePlayer != null)
-                _particlePlayer.SetActive(true);
-            Debug.Log("boom");
-            if (TryGetComponent<AudioSource>(out Source))
+            if (!_HasFallen)
             {
-                Source.Play();
+                _SetBouldersKinematic(false);
+                if (_GroundCollider != null)
+                    _GroundCollider.SetActive(false);
+
+                if (_particlePlayer != null)
+                    _particlePlayer.SetActive(true);
+                Debug.Log("boom");
+                if (TryGetComponent<AudioSource>(out Source))
+                {
+                    Source.Play();
+                }
+
+                _HasFallen = true;
             }
         }
     }

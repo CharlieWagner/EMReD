@@ -269,7 +269,7 @@ public class RoverController : MonoBehaviour
     {
         bool toReturn;
         RaycastHit Hit;
-        toReturn = Physics.SphereCast(transform.position, .3f, -Vector3.up, out Hit, 0.6f);
+        toReturn = Physics.SphereCast(transform.position, .3f, -Vector3.up, out Hit, 1f);
         if (Vector3.Angle(transform.up, Hit.normal) <= _maxFloorAngle)
         {
             _GroundedForwards = Quaternion.AngleAxis(-90, transform.forward) * Hit.normal;
@@ -282,9 +282,9 @@ public class RoverController : MonoBehaviour
         return toReturn;
     }
 
-    public void _Tool_Lamp()
+    public void _Tool_Lamp(bool state)
     {
-        Lamp.SetActive(Input.GetButton("Fire1"));
+        Lamp.SetActive(state);
     }
 
     public void Reboot()
