@@ -43,6 +43,8 @@ public class RoverController : MonoBehaviour
 
     public Transform _PlayerRespawnPoint;
 
+    bool menuActivated;
+
     [Header("Sound")]
     [SerializeField]
     private AudioSource[] _Source; // 0 Cam Switch, 1 Cam Motor, 2 Rover Motor
@@ -55,6 +57,7 @@ public class RoverController : MonoBehaviour
     public ThrusterScript _Thruster;
     public LaserScript _Laser;
     public ScannerScript _Scanner;
+    public MenuManager _Menu;
 
     private StaticController _StaticCont;
 
@@ -65,6 +68,7 @@ public class RoverController : MonoBehaviour
     }
     private void Update()
     {
+        //Debug.Log(Time.timeScale);
         if (!_Offline) // ------------------------------------------------------------------------ IF ROVER NOT OFFLINE
         {
             if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -95,7 +99,10 @@ public class RoverController : MonoBehaviour
             {
                 _CurrentTool = 4;
                 _Source[0].Play();
+               
             }
+                
+
 
             _Camera.transform.position = _CameraPosScript[_CurrentTool]._FinalTransform.position;
             _Camera.transform.rotation = _CameraPosScript[_CurrentTool]._FinalTransform.transform.rotation;
@@ -149,6 +156,16 @@ public class RoverController : MonoBehaviour
                 _Scanner.Tool_Scanner();
             else
                 _Scanner.Tool_Scanner_Disable();
+            if(_CurrentTool == 4 && !menuActivated)
+            {
+                menuActivated = true;
+                _Menu.Pause();
+            }
+            else if (_CurrentTool != 4 && menuActivated)
+            {
+                menuActivated = false;
+                _Menu.Resume();
+            }
         }
         else // ------------------------------------------------------------------------ IF ROVER OFFLINE
         {
