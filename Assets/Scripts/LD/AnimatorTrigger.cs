@@ -19,17 +19,26 @@ public class AnimatorTrigger : MonoBehaviour
     [SerializeField]
     private Animator _targetController;
 
+    [SerializeField]
+    private float _delay = 00f;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
-            if (_propertyType == 0)
-            {
-                _targetController.SetTrigger(_propertyName);
-            } else if (_propertyType == 1)
-            {
-                _targetController.SetBool(_propertyName, _stateToSet);
-            }
+            Invoke("ChangeProperty", _delay);
+        }
+    }
+
+    private void ChangeProperty()
+    {
+        if (_propertyType == 0)
+        {
+            _targetController.SetTrigger(_propertyName);
+        }
+        else if (_propertyType == 1)
+        {
+            _targetController.SetBool(_propertyName, _stateToSet);
         }
     }
 }

@@ -5,6 +5,10 @@ using UnityEngine;
 public class VoiceLineTrigger : MonoBehaviour
 {
     public AudioSource Source;
+
+    [SerializeField]
+    private float _delay = 00f;
+
     private void Start()
     {
         Source = GetComponent<AudioSource>();
@@ -14,7 +18,12 @@ public class VoiceLineTrigger : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Source.Play();
+            Invoke("PlaySource", _delay);
         }
+    }
+
+    private void PlaySource()
+    {
+        Source.Play();
     }
 }
