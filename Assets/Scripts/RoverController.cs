@@ -108,6 +108,10 @@ public class RoverController : MonoBehaviour
                 _Source[0].Play();
                
             }
+            if (Input.GetKeyDown(KeyCode.Alpha0) || Input.GetButtonDown("SelfDestruct"))
+            {
+
+            }
                 
 
 
