@@ -180,6 +180,10 @@ public class RoverController : MonoBehaviour
                 _Menu.Resume();
             }
         }
+        if (!Input.GetButton("On") && Input.GetButton("Off"))
+        {
+            Kill();
+        }
         else // ------------------------------------------------------------------------ IF ROVER OFFLINE
         {
 
@@ -195,6 +199,14 @@ public class RoverController : MonoBehaviour
 
                 Reboot();
             }
+
+
+            if (!Input.GetButton("Off") && Input.GetButton("On"))
+            {
+                Reboot();
+            }
+
+
 
 
             //_RebootScreen.SetActive(true);
