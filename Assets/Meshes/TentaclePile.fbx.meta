@@ -1,0 +1,216 @@
+fileFormatVersion: 2
+guid: 5a00e78a8d5fa62488835dbff6fc5ae1
+ModelImporter:
+  serializedVersion: 19300
+  internalIDToNameTable:
+  - first:
+      74: 2015553294979455542
+    second: BezierCurve.011|BezierCurve.001Action
+  - first:
+      74: -1189423380095941306
+    second: BezierCurve.011|BezierCurve.002Action
+  - first:
+      74: -2731833209276732888
+    second: BezierCurve.011|BezierCurve.003Action
+  - first:
+      74: 7608320719015234621
+    second: BezierCurve.011|BezierCurve.004Action
+  - first:
+      74: 279378831637724765
+    second: BezierCurve.011|BezierCurve.005Action
+  - first:
+      74: -1339872538739208119
+    second: BezierCurve.011|BezierCurve.006Action
+  - first:
+      74: -8260292805321844036
+    second: BezierCurve.011|BezierCurve.007Action
+  - first:
+      74: 8697480627107941938
+    second: BezierCurve.011|BezierCurve.008Action
+  - first:
+      74: -4648569966912914098
+    second: BezierCurve.011|BezierCurve.009Action
+  - first:
+      74: 7583461911697989697
+    second: BezierCurve.011|BezierCurve.010Action
+  - first:
+      74: -4238083608860771201
+    second: BezierCurve.011|BezierCurve.011Action
+  - first:
+      74: 3304303882972964158
+    second: BezierCurve.011|BezierCurveAction
+  - first:
+      74: 1175718637345621587
+    second: BezierCurve.011|Body.001Action
+  - first:
+      74: 8131065266005471943
+    second: BezierCurve.011|BodyAction
+  - first:
+      74: -3597627540064413069
+    second: BezierCurve.011|CameraAction
+  - first:
+      74: 9181258909625504101
+    second: BezierCurve.011|Circle.001Action
+  - first:
+      74: -8172630169184820120
+    second: BezierCurve.011|Circle.002Action
+  - first:
+      74: -2588981379234547897
+    second: BezierCurve.011|Circle.003Action
+  - first:
+      74: 7414091418146142402
+    second: BezierCurve.011|Circle.004Action
+  - first:
+      74: 5763634496596360387
+    second: BezierCurve.011|Circle.005Action
+  - first:
+      74: -380816546655061252
+    second: BezierCurve.011|Circle.005Action.001
+  - first:
+      74: -1663515322248398515
+    second: BezierCurve.011|CircleAction
+  - first:
+      74: -8531984453429133531
+    second: BezierCurve.011|ConeAction
+  - first:
+      74: 7062650942637568868
+    second: BezierCurve.011|ConeAction.001
+  - first:
+      74: -3112628904774276457
+    second: BezierCurve.011|ConeAction.002
+  - first:
+      74: 3680781806332981838
+    second: BezierCurve.011|ConeAction.003
+  - first:
+      74: 930364507616684578
+    second: BezierCurve.011|ConeAction.004
+  - first:
+      74: -3902478498759347445
+    second: BezierCurve.011|Cube.001Action
+  - first:
+      74: -7137839089189750053
+    second: BezierCurve.011|Cube.002Action
+  - first:
+      74: 5698599699053106778
+    second: BezierCurve.011|Cube.003Action
+  - first:
+      74: 8079432009757241881
+    second: BezierCurve.011|Cube.004Action
+  - first:
+      74: -7229851027694968591
+    second: BezierCurve.011|Cube.005Action
+  - first:
+      74: 1158807800981221181
+    second: BezierCurve.011|Cube.006Action
+  - first:
+      74: -5677623890435539793
+    second: BezierCurve.011|Cube.007Action
+  - first:
+      74: 7025825960677630571
+    second: BezierCurve.011|Cube.008Action
+  - first:
+      74: -4624314924708763061
+    second: BezierCurve.011|CubeAction
+  - first:
+      74: 7485896841978204636
+    second: BezierCurve.011|hatchAction
+  - first:
+      74: 28093183906129954
+    second: BezierCurve.011|knobAction
+  - first:
+      74: 1882185722124328557
+    second: BezierCurve.011|SphereAction
+  - first:
+      74: -7077898763774645682
+    second: BezierCurve.011|Walk.001
+  externalObjects: {}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,213 @@
+fileFormatVersion: 2
+guid: 09ab9bf124cf7b142823751dfb00832f
+ModelImporter:
+  serializedVersion: 19300
+  internalIDToNameTable:
+  - first:
+      74: -5343997052852095939
+    second: Exoskeleton.002|BezierCurve.001Action
+  - first:
+      74: 8651689165022864651
+    second: Exoskeleton.002|BezierCurve.002Action
+  - first:
+      74: 3130696825913127618
+    second: Exoskeleton.002|BezierCurve.003Action
+  - first:
+      74: -2828683842380285504
+    second: Exoskeleton.002|BezierCurve.004Action
+  - first:
+      74: -243916627213705402
+    second: Exoskeleton.002|BezierCurve.005Action
+  - first:
+      74: -6825578755516267765
+    second: Exoskeleton.002|BezierCurve.006Action
+  - first:
+      74: -7898348840300688761
+    second: Exoskeleton.002|BezierCurve.007Action
+  - first:
+      74: -8106037239306321551
+    second: Exoskeleton.002|BezierCurve.008Action
+  - first:
+      74: 8884134379875894276
+    second: Exoskeleton.002|BezierCurve.009Action
+  - first:
+      74: 2809498190570189922
+    second: Exoskeleton.002|BezierCurve.010Action
+  - first:
+      74: -6741373176319528090
+    second: Exoskeleton.002|BezierCurveAction
+  - first:
+      74: 1091333932282956176
+    second: Exoskeleton.002|Body.001Action
+  - first:
+      74: 5397711427162019529
+    second: Exoskeleton.002|BodyAction
+  - first:
+      74: -5340215616920407070
+    second: Exoskeleton.002|CameraAction
+  - first:
+      74: -3996405402751968798
+    second: Exoskeleton.002|Circle.001Action
+  - first:
+      74: -9095875557112019703
+    second: Exoskeleton.002|Circle.002Action
+  - first:
+      74: 2335403441046247915
+    second: Exoskeleton.002|Circle.003Action
+  - first:
+      74: 9165833005577517894
+    second: Exoskeleton.002|Circle.004Action
+  - first:
+      74: 9060064826809103026
+    second: Exoskeleton.002|Circle.005Action
+  - first:
+      74: -5479085912764937277
+    second: Exoskeleton.002|Circle.005Action.001
+  - first:
+      74: 4113769460156068459
+    second: Exoskeleton.002|CircleAction
+  - first:
+      74: -6936135184620504624
+    second: Exoskeleton.002|ConeAction
+  - first:
+      74: -4432807948664005531
+    second: Exoskeleton.002|ConeAction.001
+  - first:
+      74: -8103392091286769941
+    second: Exoskeleton.002|ConeAction.002
+  - first:
+      74: 7515689502865742441
+    second: Exoskeleton.002|ConeAction.003
+  - first:
+      74: 2905832650527651725
+    second: Exoskeleton.002|ConeAction.004
+  - first:
+      74: -5128933863182331418
+    second: Exoskeleton.002|Cube.001Action
+  - first:
+      74: -5905937610272801069
+    second: Exoskeleton.002|Cube.002Action
+  - first:
+      74: -2434174902158396445
+    second: Exoskeleton.002|Cube.003Action
+  - first:
+      74: 3638033124055601621
+    second: Exoskeleton.002|Cube.004Action
+  - first:
+      74: 181973751913755213
+    second: Exoskeleton.002|Cube.005Action
+  - first:
+      74: 5647980243479487493
+    second: Exoskeleton.002|Cube.006Action
+  - first:
+      74: 7229822148560599689
+    second: Exoskeleton.002|Cube.007Action
+  - first:
+      74: -5738427336675171442
+    second: Exoskeleton.002|Cube.008Action
+  - first:
+      74: -5365944351056238667
+    second: Exoskeleton.002|CubeAction
+  - first:
+      74: 5184223300196534220
+    second: Exoskeleton.002|hatchAction
+  - first:
+      74: 4073106853630567179
+    second: Exoskeleton.002|knobAction
+  - first:
+      74: -3092718118194548855
+    second: Exoskeleton.002|SphereAction
+  - first:
+      74: 2396847792549638861
+    second: Exoskeleton.002|Walk.001
+  externalObjects: {}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

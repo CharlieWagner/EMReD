@@ -16,6 +16,11 @@ public class ThrusterScript : MonoBehaviour
 
     public float _HoverSpeed;
 
+    [SerializeField]
+    private GameObject _ThrusterFXL;
+    [SerializeField]
+    private GameObject _ThrusterFXR;
+
     //public AudioSource _ThrusterSoundSource;
     //public AudioClip _ThrusterSound;
 
@@ -41,6 +46,9 @@ public class ThrusterScript : MonoBehaviour
                 
                 _ThrusterFuel = Mathf.Clamp(_ThrusterFuel, 0, _MaxThrusterFuel);
 
+                _ThrusterFXL.SetActive(true);
+                _ThrusterFXR.SetActive(true);
+
                 if (tutorial.tutorialStep == 9)
                     tutorial.tutorialStep = 11;
 
@@ -54,6 +62,9 @@ public class ThrusterScript : MonoBehaviour
             }
         } else
         {
+            _ThrusterFXL.SetActive(false);
+            _ThrusterFXR.SetActive(false);
+
             if (_C.isGrounded())
                 RestoreThruster();
         }
@@ -64,6 +75,9 @@ public class ThrusterScript : MonoBehaviour
 
     public void RestoreThruster()
     {
+        _ThrusterFXL.SetActive(false);
+        _ThrusterFXR.SetActive(false);
+
         _ThrusterFuel += _ThrusterRechargeRate * Time.fixedDeltaTime;
         _ThrusterFuel = Mathf.Clamp(_ThrusterFuel, 0, _MaxThrusterFuel);
     }
