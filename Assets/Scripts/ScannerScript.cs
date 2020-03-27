@@ -9,7 +9,7 @@ public class ScannerScript : MonoBehaviour
     int _layerMask = 1 << 12; // Layer = Scannable
     Shader[] _objectShaders = new Shader[30];
     int _EmitStrenghtID;
-    public int _EmitStrenght = 1;
+    public float _EmitStrenght = 1f;
 
     public float scannerRange = 10f;
     List<Collider> _scannedColliders =  new List<Collider>();
@@ -131,7 +131,7 @@ public class ScannerScript : MonoBehaviour
         Renderer renderer = scanned.GetComponent<Renderer>();
         //_objectShaders[1] = renderer.material.shader;
         _EmitStrenghtID = renderer.material.shader.GetPropertyNameId(renderer.material.shader.FindPropertyIndex("_EmitStrenght"));
-        renderer.material.SetFloat(_EmitStrenghtID, 1f);  
+        renderer.material.SetFloat(_EmitStrenghtID, _EmitStrenght);  
         _scannedColliders.Add(scanned);
     }
 }
