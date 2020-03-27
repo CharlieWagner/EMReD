@@ -50,6 +50,13 @@ public class RoverController : MonoBehaviour
     private AudioSource[] _Source; // 0 Cam Switch, 1 Cam Motor, 2 Rover Motor
     private float _WheelPitch;
 
+    [Header("Tutorial")]
+    [SerializeField]
+    //private int tutorialStep = 0;
+    public TutorialManager tutorial;
+    bool movedLeft, movedRight, movedFront, movedBack; 
+   
+
     public Rigidbody _PlayerRB;
 
     public Animator _CanvasAnim;
@@ -147,6 +154,8 @@ public class RoverController : MonoBehaviour
             if (_CurrentTool == 2)
             {
                 _Laser.Tool_Laser();
+                //if (tutorial.tutorialStep == 11)
+                //    tutorial.tutorialStep = 11;
             } else
             {
                 _Laser.Tool_DisableUI();
@@ -155,8 +164,12 @@ public class RoverController : MonoBehaviour
             if (_CurrentTool == 3)
                 _Scanner.Tool_Scanner();
             else
-                _Scanner.Tool_Scanner_Disable();
-            if(_CurrentTool == 4 && !menuActivated)
+            {
+                _Scanner.Tool_Scanner_Disable(); 
+                if (tutorial.tutorialStep == 15)
+                    tutorial.tutorialStep = 16;
+            }
+        if (_CurrentTool == 4 && !menuActivated)
             {
                 menuActivated = true;
                 _Menu.Pause();
@@ -200,6 +213,18 @@ public class RoverController : MonoBehaviour
         _newPitch = (_WheelPitch * .3f) + .2f;
         _Source[2].pitch = _newPitch;
 
+        if (tutorial.tutorialStep == 3 && movedRight && movedLeft)
+        {
+            tutorial.tutorialStep = 4;
+            //tutorial.AdvanceTutorial();
+        }
+        if (tutorial.tutorialStep == 4 && movedFront && movedBack)
+        {
+            tutorial.tutorialStep = 8;
+            //tutorial.AdvanceTutorial();
+        }
+        
+
     }
 
     void FixedUpdate()
@@ -209,6 +234,10 @@ public class RoverController : MonoBehaviour
             if (_CurrentTool == 1)
             { // THRUSTERS
                 _Thruster.Tool_Thruster();
+                if (tutorial.tutorialStep == 8)
+                {
+                    tutorial.tutorialStep = 9;
+                }
             }
             else
             {
@@ -239,12 +268,21 @@ public class RoverController : MonoBehaviour
 
     public Vector3 BaseVelocityTarget(float Speed) // Base X & Z axis velocity target
     {
+
         return (_GroundedForwards * Input.GetAxis("Vertical") * Speed);
     }
 
     public void RotatePlayer()
     {
         transform.Rotate(new Vector3(0, Input.GetAxis("Horizontal"), 0) * Time.deltaTime * _RotSpeed);
+        if(Input.GetAxis("Horizontal") > 0 && tutorial.tutorialStep == 3)
+        {
+            movedRight = true;
+        }
+        if (Input.GetAxis("Horizontal") < 0 && tutorial.tutorialStep == 3)
+        {
+            movedLeft = true;
+        }
     }
 
     public void AccelerateTowards(Vector3 Target)
@@ -263,6 +301,14 @@ public class RoverController : MonoBehaviour
         }*/
 
         _PlayerRB.AddForce(Acceleration.normalized * Mathf.Clamp(Acceleration.magnitude, 0, _MaxAcceleration));
+        if (Input.GetAxis("Vertical") > 0 && tutorial.tutorialStep == 4)
+        {
+            movedFront= true;
+        }
+        if (Input.GetAxis("Vertical") < 0 && tutorial.tutorialStep == 4)
+        {
+            movedBack = true;
+        }
     }
 
     public bool isGrounded()

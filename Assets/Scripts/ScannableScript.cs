@@ -15,11 +15,11 @@ public class ScannableScript : MonoBehaviour
     public string DisplayInfo()
     {
         string toDipslay = null;
-        toDipslay = "ANALYSE: " + objectName + "\n"
-            + "CLASSIFICATION: " + objectClassification + "\n"
-            + "TYPE: " + objectType + "\n"
-            + "DANGEROSITE: " + objectDangerousity + "\n"
-            + "DESCRIPTION: " + objectDescription + "\n";
+        toDipslay = "ANALYSE: " + objectName + "\n" + "\n"
+            + "CLASSIFICATION: " + objectClassification + "\n" + "\n"
+            + "TYPE: " + objectType + "\n" + "\n"
+            + "DANGEROSITE: " + objectDangerousity + "\n" + "\n"
+            + "DESCRIPTION: " + objectDescription;
         return toDipslay;
     }
 }
