@@ -1,5 +1,49 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &302117582476621625
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 758230514067008555}
+  - component: {fileID: 3377160445927013781}
+  m_Layer: 0
+  m_Name: Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &758230514067008555
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302117582476621625}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 15, y: 15, z: 15}
+  m_Children: []
+  m_Father: {fileID: 6612927837289957614}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &3377160445927013781
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302117582476621625}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6612927836587755482
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,7 +178,8 @@ GameObject:
   - component: {fileID: 6612927836928129082}
   - component: {fileID: 6612927836928129083}
   - component: {fileID: 6612927836928129080}
-  m_Layer: 0
+  - component: {fileID: 8083038644883627253}
+  m_Layer: 12
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -154,7 +199,7 @@ Transform:
   m_Children:
   - {fileID: 6612927836587755485}
   m_Father: {fileID: 6612927837289957614}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6612927836928129082
 MeshFilter:
@@ -211,11 +256,28 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6612927836928129030}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8083038644883627253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6612927836928129030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23eaa0169efd36649812ab077b6226a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectClassification: Inconnue
+  objectType: "Mat\xE9riaux non identifi\xE9"
+  objectDangerousity: Inconnu
+  objectDescription: "Structure non naturelle. Appartenance \xE0 une forme de vie
+    intelligente non confirm\xE9. Analyse suppl\xE9mentaire requise."
 --- !u!1 &6612927837289957612
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,6 +306,7 @@ Transform:
   m_LocalPosition: {x: 197.78, y: -59.57, z: -88.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 758230514067008555}
   - {fileID: 6612927836928129081}
   m_Father: {fileID: 0}
   m_RootOrder: 0
