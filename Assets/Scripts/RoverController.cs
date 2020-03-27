@@ -78,35 +78,39 @@ public class RoverController : MonoBehaviour
         //Debug.Log(Time.timeScale);
         if (!_Offline) // ------------------------------------------------------------------------ IF ROVER NOT OFFLINE
         {
-            if (Input.GetKeyDown(KeyCode.Alpha1))
+            if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetButtonUp("DisquetteA") || Input.GetButtonUp("DisquetteB") || Input.GetButtonUp("DisquetteC") || Input.GetButtonUp("DisquetteD"))
             {
                 _CurrentTool = 0;
                 _Source[0].Play();
             }
 
-            if (Input.GetKeyDown(KeyCode.Alpha2))
+            if (Input.GetKeyDown(KeyCode.Alpha2) || Input.GetButtonDown("DisquetteA"))
             {
                 _CurrentTool = 1;
                 _Source[0].Play();
             }
 
-            if (Input.GetKeyDown(KeyCode.Alpha3))
+            if (Input.GetKeyDown(KeyCode.Alpha3) || Input.GetButtonDown("DisquetteB"))
             {
                 _CurrentTool = 2;
                 _Source[0].Play();
             }
 
-            if (Input.GetKeyDown(KeyCode.Alpha4))
+            if (Input.GetKeyDown(KeyCode.Alpha4) || Input.GetButtonDown("DisquetteC"))
             {
                 _CurrentTool = 3;
                 _Source[0].Play();
             }
 
-            if (Input.GetKeyDown(KeyCode.Alpha5))
+            if (Input.GetKeyDown(KeyCode.Alpha5) || Input.GetButtonDown("DisquetteD"))
             {
                 _CurrentTool = 4;
                 _Source[0].Play();
                
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha0) || Input.GetButtonDown("SelfDestruct"))
+            {
+
             }
                 
 
@@ -180,6 +184,10 @@ public class RoverController : MonoBehaviour
                 _Menu.Resume();
             }
         }
+        if (!Input.GetButton("On") && Input.GetButton("Off"))
+        {
+            Kill();
+        }
         else // ------------------------------------------------------------------------ IF ROVER OFFLINE
         {
 
@@ -195,6 +203,14 @@ public class RoverController : MonoBehaviour
 
                 Reboot();
             }
+
+
+            if (!Input.GetButton("Off") && Input.GetButton("On"))
+            {
+                Reboot();
+            }
+
+
 
 
             //_RebootScreen.SetActive(true);
