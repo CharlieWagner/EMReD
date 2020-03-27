@@ -7,13 +7,13 @@ public class StartMenuScript : MonoBehaviour
 {
 
     [SerializeField]
-    private Scene MainScene;
+    private string MainScene;
 
     private void Update()
     {
         if (Input.GetButton("Fire1"))
         {
-            SceneManager.LoadScene(MainScene.name);
+            SceneManager.LoadScene(MainScene);
         }
     }
 }
