@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ScannableScript : MonoBehaviour
 {
-    public string objectName;
+    //public string objectName;
     public string objectClassification;
     public string objectType;
     public string objectDangerousity;
@@ -15,8 +15,8 @@ public class ScannableScript : MonoBehaviour
     public string DisplayInfo()
     {
         string toDipslay = null;
-        toDipslay = "ANALYSE: " + objectName + "\n" + "\n"
-            + "CLASSIFICATION: " + objectClassification + "\n" + "\n"
+        toDipslay =
+            "CLASSIFICATION: " + objectClassification + "\n" + "\n"
             + "TYPE: " + objectType + "\n" + "\n"
             + "DANGEROSITE: " + objectDangerousity + "\n" + "\n"
             + "DESCRIPTION: " + objectDescription;
