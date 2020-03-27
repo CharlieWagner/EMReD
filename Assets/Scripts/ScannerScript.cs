@@ -32,6 +32,9 @@ public class ScannerScript : MonoBehaviour
 
     ScannableScript _Scannable;
     // Update is called once per frame
+
+    [Header("Tutorial")]
+    public TutorialManager tutorial;
     public void Awake()
     {
         _camera = GetComponentsInChildren<Camera>();
@@ -63,12 +66,14 @@ public class ScannerScript : MonoBehaviour
                     scannableInfo.text = _Scannable.DisplayInfo();
                     infoIndicator.SetActive(true);
                     infoDisplayed = true;
+                    if (tutorial.tutorialStep == 14)
+                        tutorial.tutorialStep = 15;
                 }
                 
             }
             if (infoDisplayed)
             {
-                if (!Physics.Raycast(_camera[1].transform.position, _camera[1].transform.forward, out hit, scannerRange, _layerMask))
+                if (!Physics.Raycast(_camera[1].transform.position, _camera[1].transform.forward, out hit, Mathf.Infinity, _layerMask))
                 {
                     infoDisplayed = false;
                     scannableInfo.text = null;

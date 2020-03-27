@@ -32,6 +32,9 @@ public class LaserScript : MonoBehaviour
     [SerializeField]
     private LayerMask _laserMask;
 
+    [Header("Tutorial")]
+    public TutorialManager tutorial;
+
 
     // Start is called before the first frame update
     public void Awake()
@@ -85,6 +88,8 @@ public class LaserScript : MonoBehaviour
                 _Audio.clip = _LaserSounds[2];
                 if (!_Audio.isPlaying)
                     _Audio.Play();
+                if (tutorial.tutorialStep == 11)
+                    tutorial.tutorialStep = 14;
 
                 RaycastHit hit;
                 if (Physics.Raycast(_camera[1].transform.position, _camera[1].transform.forward, out hit, 150f, _laserMask))

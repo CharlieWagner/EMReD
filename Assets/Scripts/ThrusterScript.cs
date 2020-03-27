@@ -22,6 +22,11 @@ public class ThrusterScript : MonoBehaviour
     public int _GaugeLength;
     public Text _ThrusterGauge;
 
+    [Header("Tutorial")]
+    //private int tutorialStep = 0;
+    public TutorialManager tutorial;
+    //bool ThrusterActivated = false;
+
     public void Tool_Thruster()
     {
         if (Input.GetButton("Fire1"))
@@ -35,6 +40,9 @@ public class ThrusterScript : MonoBehaviour
                 _ThrusterFuel -= _ThrusterDepleteRate * Time.fixedDeltaTime;
                 
                 _ThrusterFuel = Mathf.Clamp(_ThrusterFuel, 0, _MaxThrusterFuel);
+
+                if (tutorial.tutorialStep == 9)
+                    tutorial.tutorialStep = 11;
 
                 /*if (Time.frameCount % 5 == 0)
                 {
