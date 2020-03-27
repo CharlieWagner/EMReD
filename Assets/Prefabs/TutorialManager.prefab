@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!64 &9196521635388243269
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901131854991451200}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4959163775888479014, guid: 7dcc80f8550038c49bb18adfd8a4eb85, type: 3}
+--- !u!114 &9196521635388243268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901131854991451200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23eaa0169efd36649812ab077b6226a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectClassification: "Portail 001-01-01- Om\xE9ga Mini"
+  objectType: "PVC peu co\xFBteux "
+  objectDangerousity: Non dangeureux
+  objectDescription: "R\xE9plique miniature \xE0 l'\xE9chelle "
 --- !u!1 &9196521634404322771
 GameObject:
   m_ObjectHideFlags: 0
@@ -1471,7 +1501,7 @@ GameObject:
   - component: {fileID: 9196521635270419064}
   m_Layer: 0
   m_Name: TutorialManager
-  m_TagString: Untagged
+  m_TagString: TutorialManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1523,37 +1553,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f29dd9d63e6f22f4789efc227fafc425, type: 3}
   IALineSource: {fileID: 0}
   tutorialStep: 0
---- !u!64 &9196521635388243269
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 901131854991451200}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4959163775888479014, guid: 7dcc80f8550038c49bb18adfd8a4eb85, type: 3}
---- !u!114 &9196521635388243268
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 901131854991451200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23eaa0169efd36649812ab077b6226a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectName: Miniature de Portail Omega
-  objectClassification: "Portail 001-01-01- Om\xE9ga Mini"
-  objectType: "PVC peu co\xFBteux "
-  objectDangerousity: Non dangeureux
-  objectDescription: "R\xE9plique miniature \xE0 l'\xE9chelle "
 --- !u!1001 &9196521635388243273
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -22,9 +22,17 @@ public class AnimatorTrigger : MonoBehaviour
     [SerializeField]
     private float _delay = 00f;
 
+    
+    private TutorialManager tutorial;
+
+    private void Awake()
+    {
+        tutorial = GameObject.FindGameObjectWithTag("TutorialManager").GetComponent<TutorialManager>();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" && tutorial.tutorialStep == 16)
         {
             Invoke("ChangeProperty", _delay);
         }
