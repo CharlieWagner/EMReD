@@ -183,11 +183,12 @@ public class RoverController : MonoBehaviour
                 menuActivated = false;
                 _Menu.Resume();
             }
+            if (!Input.GetButton("On") && Input.GetButton("Off"))
+            {
+                Kill();
+            }
         }
-        if (!Input.GetButton("On") && Input.GetButton("Off"))
-        {
-            Kill();
-        }
+        
         else // ------------------------------------------------------------------------ IF ROVER OFFLINE
         {
 
