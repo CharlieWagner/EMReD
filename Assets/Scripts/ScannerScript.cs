@@ -108,9 +108,16 @@ public class ScannerScript : MonoBehaviour
                     Renderer renderer = scanned.GetComponent<Renderer>();
                     //_objectShaders[1] = renderer.material.shader;
                     //renderer.material.shader = Shader.Find("Universal Render Pipeline/Lit");
-                    _EmitStrenghtID = renderer.material.shader.GetPropertyNameId(renderer.material.shader.FindPropertyIndex("_EmitStrenght"));
-                    Debug.Log(renderer.material.GetFloat(_EmitStrenghtID)); 
-                    renderer.material.SetFloat(_EmitStrenghtID, 0);
+                    if (renderer.materials.Length > 2)
+                    {
+                        _EmitStrenghtID = renderer.materials[1].shader.GetPropertyNameId(renderer.materials[1].shader.FindPropertyIndex("_EmitStrenght"));
+                        renderer.materials[1].SetFloat(_EmitStrenghtID, 0f);
+                    }
+                    else
+                    {
+                        _EmitStrenghtID = renderer.material.shader.GetPropertyNameId(renderer.material.shader.FindPropertyIndex("_EmitStrenght"));
+                        renderer.material.SetFloat(_EmitStrenghtID, 0f);
+                    }
                 }
                 _scannedColliders.Clear();
             }
@@ -130,8 +137,17 @@ public class ScannerScript : MonoBehaviour
     {
         Renderer renderer = scanned.GetComponent<Renderer>();
         //_objectShaders[1] = renderer.material.shader;
-        _EmitStrenghtID = renderer.material.shader.GetPropertyNameId(renderer.material.shader.FindPropertyIndex("_EmitStrenght"));
-        renderer.material.SetFloat(_EmitStrenghtID, _EmitStrenght);  
+        if (renderer.materials.Length > 2)
+        {
+            _EmitStrenghtID = renderer.materials[1].shader.GetPropertyNameId(renderer.materials[1].shader.FindPropertyIndex("_EmitStrenght"));
+            renderer.materials[1].SetFloat(_EmitStrenghtID, _EmitStrenght);
+        }
+        else
+        {
+            _EmitStrenghtID = renderer.material.shader.GetPropertyNameId(renderer.material.shader.FindPropertyIndex("_EmitStrenght"));
+            renderer.material.SetFloat(_EmitStrenghtID, _EmitStrenght);
+        }
+
         _scannedColliders.Add(scanned);
     }
 }
